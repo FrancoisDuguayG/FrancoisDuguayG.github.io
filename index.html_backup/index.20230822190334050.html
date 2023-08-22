@@ -591,6 +591,8 @@ Error message and password prompt
 
 <li>css</li>
 
+<li>Draft of '1.02 Installation'</li>
+
 <li>E:\tmp\420-383-li-em\NotesDeCours\tiddlers\$__StoryList-winzen.tid</li>
 
 <li>E:\tmp\420-383-li-em\NotesDeCours\tiddlers\$__StoryList-winzen.tid.html</li>
@@ -9535,7 +9537,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="Semainier [[Table des matières]] [[1.02 Installation]] [[1.03 Première utilisation]]" title="$:/StoryList">
+<div list="Semainier [[Table des matières]] [[Draft of '1.02 Installation']]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20210506132122141" title="$:/temp/advancedsearch">
@@ -9827,13 +9829,11 @@ Bien qu'on puisse mettre des schémas non-systèmes dans la CDB, ce n'est pas la
 ---
 </pre>
 </div>
-<div bag="default" created="20200122032906450" list="" modified="20230822190336985" revision="0" tags="1.Exercices" title="1.02 Installation" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200122032906450" list="" modified="20230819175327005" revision="0" tags="1.Exercices" title="1.02 Installation" type="text/vnd.tiddlywiki">
 <pre>Plutôt que de vous faire installer [[Oracle XE|https://www.oracle.com/ca-en/database/technologies/appdev/xe.html]] par vous mêmes (ce qui est un peu moins simple que d'autres SGDB), je vais vous fournir une VM qui vous servira de serveur Oracle.
 
 # Télécharger le fichier de machine virtuelle VMWare avec le lien ci-dessous (lien donné sur le serveur du cégep; vous devez vous connecter par [[Citrix|https://www.cegeplimoilou.ca/etudiants/guide-de-l-etudiant/services-informatiques/acces-a-distance-aux-laboratoires-et-aux-machines-virtuelles/]] ou [[VPN|https://lecegeplimoilou.sharepoint.com/sites/Documentations/SitePages/Home.aspx]] pour y accéder si vous n'êtes pas sur place):
 #* ''[[VMware|https://www.vmware.com/ca/products/workstation-player.html]]'': `&quot;T:\420 - Techniques de l'Informatique\Cours\Eric Martel\BD 2\Oracle Linux 8 64-bit.7z&quot;`
-
-
 
 # Suivre les instructions de la vidéo ci-dessous pour importer et exécuter la machine sur votre ordinateur&lt;div&gt;
 
@@ -9848,24 +9848,6 @@ Bien qu'on puisse mettre des schémas non-systèmes dans la CDB, ce n'est pas la
 
 #* Changer l'adresse IP pour 192.168.153.0
 [img[vmware network.png]]
-
-&lt;p class=&quot;boite&quot;&gt;
-
-! ''IMPORTANT!!!''
-
-Si vous avez besoin de droits Admin pour changer le Subnet IP vous devezutiliser le compte suivant:
-
-Au local ''Q3516'' :
-
-*''Utilisateur : Admin.Q3516''
-*''Mot de passe : admin.q3516''
-
-Au local ''Q2516'' :
-
-*''Utilisateur : Admin.Q2516''
-*''Mot de passe : admin.q2516''
-&lt;/p&gt;
-
 
 
 # Télécharger et exécuter ''Oracle SQL Developer'' (disponible au `&quot;T:\420 - Techniques de l'Informatique\Cours\Eric Martel\BD 2\sqldeveloper-22.2.0.173.2018-x64.zip&quot;`)
@@ -9917,7 +9899,7 @@ Tel que vu à la section 1.01, ''IL NE FAUT HABITUELLEMENT JAMAIS TRAVAILLER DAN
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/e513a327-2b54-496d-9b9c-bc8c0256a85b?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;&lt;br&gt;(Lien Stream de la vidéo: https://web.microsoftstream.com/video/e513a327-2b54-496d-9b9c-bc8c0256a85b?list=user&amp;userId=58264c04-10d3-4ec8-aed6-cf72dc5ba64e)</pre>
 </div>
-<div bag="default" created="20200122042128781" list="" modified="20230822192251266" revision="0" tags="1.Exercices" title="1.03 Première utilisation" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200122042128781" list="" modified="20230821134840293" revision="0" tags="1.Exercices" title="1.03 Première utilisation" type="text/vnd.tiddlywiki">
 <pre>!! Documentation Oracle
 
 * [[Accueil|https://docs.oracle.com/en/database/oracle/oracle-database/21/index.html]]
@@ -9927,21 +9909,9 @@ Tel que vu à la section 1.01, ''IL NE FAUT HABITUELLEMENT JAMAIS TRAVAILLER DAN
 * [[Types de données|https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/tables-and-table-clusters.html#GUID-A8F3420D-093C-449F-87E4-6C3DDFA8BCFF]]
 
 !! Exercice
-#À l'aide de la documentation Oracle, essayez d'adapter et d'implémenter dans Oracle XE le MPD ~MySQL inclut dans [[ce fichier Visio|https://lecegeplimoilou.sharepoint.com/:u:/s/Section_89465/Eb_F700KXgtPvn_3pgKnaBoBvSEFHt1BWDzfNAfCqeEonA?e=Rcn9Fv]].
+À l'aide de la documentation Oracle, essayez d'adapter et d'implémenter dans Oracle XE le MPD ~MySQL inclut dans [[ce fichier Visio|https://lecegeplimoilou.sharepoint.com/:u:/s/Section_89465/Eb_F700KXgtPvn_3pgKnaBoBvSEFHt1BWDzfNAfCqeEonA?e=Rcn9Fv]].
 
-#*''ATTENTION'': Parmi d'autres choses, notez que les mots clefs «AUTO_INCREMENT» et «UNSIGNED» sont inconnus à Oracle.
-
-#Compléter la commande ''PL/SQL'' suivante pour créer la table restaurant:&lt;code&gt;
-CREATE TABLE restaurant
-(
-  id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  -- Compléter ici
-);
-&lt;/code&gt;
-
-#Ajouter 2 restaurants à votre table
-
-</pre>
+''ATTENTION'': Parmi d'autres choses, notez que les mots clefs «AUTO_INCREMENT» et «UNSIGNED» sont inconnus à Oracle.</pre>
 </div>
 <div created="20210912205446995" modified="20230819223214721" tags="[[01 Oracle XE]]" title="1.04 Importation de données avec SQL Developer">
 <pre>Présentation de [[Oracle SQL Developer | https://www.oracle.com/ca-fr/database/sqldeveloper/technologies/what-is-sql-developer/]]
@@ -13805,6 +13775,96 @@ Dans Oracle, comme on n'est toujours dans une transaction, il suffit de mettre d
 li {
   margin-bottom: 0.5em;
 }</pre>
+</div>
+<div bag="default" created="20200122032906450" draft.of="1.02 Installation" draft.title="1.02 Installation" list="" modified="20230822190319144" revision="0" tags="1.Exercices" title="Draft of '1.02 Installation'" type="text/vnd.tiddlywiki">
+<pre>Plutôt que de vous faire installer [[Oracle XE|https://www.oracle.com/ca-en/database/technologies/appdev/xe.html]] par vous mêmes (ce qui est un peu moins simple que d'autres SGDB), je vais vous fournir une VM qui vous servira de serveur Oracle.
+
+# Télécharger le fichier de machine virtuelle VMWare avec le lien ci-dessous (lien donné sur le serveur du cégep; vous devez vous connecter par [[Citrix|https://www.cegeplimoilou.ca/etudiants/guide-de-l-etudiant/services-informatiques/acces-a-distance-aux-laboratoires-et-aux-machines-virtuelles/]] ou [[VPN|https://lecegeplimoilou.sharepoint.com/sites/Documentations/SitePages/Home.aspx]] pour y accéder si vous n'êtes pas sur place):
+#* ''[[VMware|https://www.vmware.com/ca/products/workstation-player.html]]'': `&quot;T:\420 - Techniques de l'Informatique\Cours\Eric Martel\BD 2\Oracle Linux 8 64-bit.7z&quot;`
+
+
+
+# Suivre les instructions de la vidéo ci-dessous pour importer et exécuter la machine sur votre ordinateur&lt;div&gt;
+
+&gt; //&amp;rArr; Attention de ne pas créer ni sauvegarder les fichiers de votre VM sur un ordinateur du labo, ni dans un dossier de partage infonuagique (~OneDrive, etc.)!//
+
+&gt; &amp;rArr; Si vous désirez installer VMware Workstation Pro sur un ordinateur personnel, suivez les instructions envoyées par la DSTI du cégep afin de vous procurer une licence d'un an.
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/b477a7a9-34c7-40ab-b873-e6f96d3f71cb?autoplay=false&amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;&lt;br&gt;(Lien Stream de la vidéo: https://web.microsoftstream.com/video/b477a7a9-34c7-40ab-b873-e6f96d3f71cb)
+&lt;/div&gt; 
+
+# Changer l'adresse IP du réseau VMnet8. Dans VMware: Edit &gt; virtual network editor...
+
+#* Changer l'adresse IP pour 192.168.153.0
+[img[vmware network.png]]
+
+&lt;p class=&quot;boite&quot;&gt;
+
+! ''IMPORTANT!!!''
+
+Si vous avez besoin de droits Admin pour changer le Subnet IP vous devezutiliser le compte suivant:
+
+Au local ''Q3516'' :
+
+*''Utilisateur : Admin.Q3516''
+*''Mot de passe : admin.q3516''
+
+Au local ''Q2516'' :
+
+*''Utilisateur : Admin.Q2516''
+*''Mot de passe : admin.q2516''
+&lt;/p&gt;
+
+
+
+# Télécharger et exécuter ''Oracle SQL Developer'' (disponible au `&quot;T:\420 - Techniques de l'Informatique\Cours\Eric Martel\BD 2\sqldeveloper-22.2.0.173.2018-x64.zip&quot;`)
+
+# Dans SQL Developer:&lt;div&gt;
+&lt;p class=&quot;boite&quot;&gt;
+
+! ''ATTENTION!!! IMPORTANT!!!''
+
+Tel que vu à la section 1.01, ''IL NE FAUT HABITUELLEMENT JAMAIS TRAVAILLER DANS LA CDB''. Dans le présente exercice -- et SEULEMENT dans le présent exercice, vous allez travailler un peu dans la CDB ''à des fins pédagogiques seulement''. Pour tout le reste de la session, ''vous travaillerez TOUJOURS dans la PDB1''.
+
+&lt;/p&gt;
+&lt;/div&gt;
+## ''simplement à des fins pédagogiques'', créez une nouvelle connexion administrateur dans la CDB:
+##&gt; [img[https://i.imgur.com/gGHPGgt.png]]
+##* ''Name'': c'est le nom qu'on veut donner à la connexion; ça peut être ce que l'on veut, mais typiquement on mettra quelque-chose comme «nom_usager@service»; ici, mettre p.ex. ``sys@cdb``
+##* ''Nom utilisateur'': ``sys``
+##* ''Rôle'': SYSDBA
+##* ''Mot de passe'': abc123
+##* ''Nom d'hôte'': mettez l'adresse IP de votre VM (sauf exception, devrait être 192.168.153.5)
+##* ''Port'': 1521
+##* ''SID'': xe
+
+## ''simplement à des fins pédagogiques'', à partir de la connexion «sys@cdb», créez un utilisateur/schéma de votre choix avec ``CREATE USER c##nom IDENTIFIED BY mot_de_passe;``
+##* dans la CDB, tous les schémas non-systèmes doivent être précédés de «c##», sinon il y aura une erreur
+##* les nouveaux utilisateurs créés n'ayant aucun privilège, incluant la permission de se connecter, faites `GRANT ALL PRIVILEGES TO c##nom;` afin de lui donner tous les droits.
+
+## ''maintenant et pour le reste du cours'', créez maintenant une nouvelle connexion administrateur dans la PDB1 créée automatiquement lors de l'installation:
+##* ''Name'': c'est le nom qu'on veut donner à la connexion; ça peut être ce que l'on veut, mais typiquement on mettra quelque-chose comme «nom_usager@service»; ici, mettre p.ex. ``sys@pdb1``
+##* ''Nom utilisateur'': ``sys``
+##* ''Rôle'': SYSDBA
+##* ''Mot de passe'': abc123
+##* ''Nom d'hôte'': mettez l'adresse IP de votre VM (sauf exception, devrait être 192.168.153.5)
+##* ''Port'': 1521
+##* ''Nom de service'': XEPDB1
+
+## à partir de la connexion «sys@pdb1», créer un utilisateur/schéma de votre choix avec ``CREATE USER nom_schema IDENTIFIED BY mot_de_passe;``
+##* dans une PDB, on n'a pas besoin de précéder les schémas de «c##»
+##* n'oubliez pas de faire un GRANT ici aussi, comme précédemment.
+
+## Créer maintenant une connexion pour chacun des deux nouveaux schémas créés ci-dessus.
+##* La seule différence avec 4.1 et 4.3, c'est que vous devrez choisir «par défaut» pour le rôle
+
+* Au besoin, pour ouvrir des fenêtre de script, cliquez sur l'icône //SQL// dans la barre d'outils: &lt;br&gt;[img[https://i.imgur.com/fju82uL.png]]
+
+* Et vous pouvez choisir la connexion dans laquelle s'effectueront les commandes SQL avec la liste déroulante située dans le coin supérieur droit de la fenêtre de script:&lt;br&gt; [img[https://i.imgur.com/r9LK9mh.png]]
+
+---
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/e513a327-2b54-496d-9b9c-bc8c0256a85b?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;&lt;br&gt;(Lien Stream de la vidéo: https://web.microsoftstream.com/video/e513a327-2b54-496d-9b9c-bc8c0256a85b?list=user&amp;userId=58264c04-10d3-4ec8-aed6-cf72dc5ba64e)</pre>
 </div>
 <div bag="default" revision="0" title="E:\tmp\420-383-li-em\NotesDeCours\tiddlers\$__StoryList-winzen.tid">
 <pre></pre>
