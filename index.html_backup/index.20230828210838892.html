@@ -9539,7 +9539,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="Semainier [[2.01 Langage SQL]] [[2.02 La corbeille]] [[2.03 Note importante concernant les transactions]] [[3.04 Représentation graphique d'un MCD]] [[2.04 Paramètres de session Oracle]] [[2.05 Séquences]] [[2.06 Synonymes]] [[3.01 Introduction]] [[3.02 Modèle conceptuel de données (MCD)]] [[3.03 Méthode de modélisation MCD]] [[3.05 Logiciels MCD]] [[3.06 Associations avec attributs]] [[3.07 Associations cycliques]] [[3.08 Entité vs attribut]] [[3.09 Entités de même nature]] 3.Exercices [[05 Sous-requêtes]] [[5.01 Théorie]] [[1.03 Première utilisation]]" title="$:/StoryList">
+<div list="Semainier [[2.01 Langage SQL]] [[2.02 La corbeille]] [[2.03 Note importante concernant les transactions]] [[3.04 Représentation graphique d'un MCD]] [[2.04 Paramètres de session Oracle]] [[2.05 Séquences]] [[2.06 Synonymes]] [[3.01 Introduction]] [[3.02 Modèle conceptuel de données (MCD)]] [[3.03 Méthode de modélisation MCD]] [[3.05 Logiciels MCD]] [[3.06 Associations avec attributs]] [[3.07 Associations cycliques]] [[3.08 Entité vs attribut]] [[3.09 Entités de même nature]] 3.Exercices" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20210506132122141" title="$:/temp/advancedsearch">
@@ -9599,7 +9599,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210413114920844" modified="20230829014901966" title="$:/temp/search">
+<div created="20210413114920844" modified="20230820182621337" title="$:/temp/search">
 <pre></pre>
 </div>
 <div author="JeremyRuston" bag="default" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" revision="0" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.17">
@@ -9923,7 +9923,7 @@ Tel que vu à la section 1.01, ''IL NE FAUT HABITUELLEMENT JAMAIS TRAVAILLER DAN
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/e513a327-2b54-496d-9b9c-bc8c0256a85b?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;&lt;br&gt;(Lien Stream de la vidéo: https://web.microsoftstream.com/video/e513a327-2b54-496d-9b9c-bc8c0256a85b?list=user&amp;userId=58264c04-10d3-4ec8-aed6-cf72dc5ba64e)</pre>
 </div>
-<div bag="default" created="20200122042128781" list="" modified="20230829011128468" revision="0" tags="1.Exercices" title="1.03 Première utilisation" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200122042128781" list="" modified="20230824210721216" revision="0" tags="1.Exercices" title="1.03 Première utilisation" type="text/vnd.tiddlywiki">
 <pre>!! Documentation Oracle
 
 * [[Accueil|https://docs.oracle.com/en/database/oracle/oracle-database/21/index.html]]
@@ -9939,7 +9939,7 @@ Tel que vu à la section 1.01, ''IL NE FAUT HABITUELLEMENT JAMAIS TRAVAILLER DAN
 
 #Implémenter dans oracle XE la table restaurant et client du MPD modifié.
 
-#Insérer 2 restaurants.
+#Insérer 2 restaurants (vous aurez besoin d'ajouter l'instruction &quot;commit&quot; à la fin de vos instructions).
 
 </pre>
 </div>
@@ -11664,20 +11664,11 @@ Une autre façon serait de créer une entité «Rôle» qui viendrait lister les
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/b1bf73b7-447d-4b5c-ab77-1215a55576ee?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;&lt;br&gt;https://web.microsoftstream.com/video/b1bf73b7-447d-4b5c-ab77-1215a55576ee</pre>
 </div>
-<div created="20220829185226472" modified="20230829015318833" tags="[[03 Modélisation conceptuelle]]" title="3.Exercices">
-<pre>Vous pouvez vous mettre en équipe de 2 ou 3 pour l'exercice. 
-
-* Vous allez créer un MCD graphique ''avec pattes d'oie'' pour une des situations suivantes (vous devez imaginer les entités, attributs, etc.):
-**une compagnie d'assurance automobile. Chaque voiture est assurée pour une personne;
-**une bibliothèque avec prêt de livres à des membres. Les livres ont des catégories;
-**une structure administrative d'entreprise. Des employés peut être supervisé par un autre employé.
-
-# Commencer par Identifier une liste d'entités pertinentes pour votre scénario. Vérifier avec votre enseignant.
-# Identifier les attributs clés et les contraintes pour chaque entité.
-# Identifier les relations entre les entités.
-# Créer un MCD graphique avec les entités, les contraintes et les relations identifiées.
-# Finalement, créer 3 requêtes simples pour interroger votre modèle relationnel. Vérifier avec votre enseignant.
-</pre>
+<div created="20220829185226472" modified="20230828210838752" tags="[[03 Modélisation conceptuelle]]" title="3.Exercices">
+<pre># Créer un MCD graphique ''avec pattes d'oie'' pour chacune des situations suivantes (vous devez imaginer les entités, attributs, etc.; pour des exemples déjà donnés dans les notes, voyez si vous pouvez penser à des éléments supplémentaires à ajouter):
+##une compagnie d'assurance automobile;
+##une bibliothèque avec prêt de livres ;
+##une structure administrative d'entreprise.</pre>
 </div>
 <div created="20220906144845791" modified="20220906145856883" tags="[[04 Modèles logiques et physiques]]" title="4.01 Modèle logique de données (MLD)">
 <pre>Après avoir complété un MCD, on passera au ''modèle logique de données (MLD)'', soit une conversion du MCD sous une forme qui se rapprochera du type de BD visé (relationnelle ou autre), sans toutefois se préoccuper du logiciel ou serveur de BD spécifique qui sera utilisé au final.
@@ -11903,8 +11894,11 @@ FROM
     vw_pays_asie;
 ```</pre>
 </div>
-<div created="20220906152045067" modified="20230829011432864" tags="[[04 Modèles logiques et physiques]]" title="4.Exercices">
-<pre># Créez un MPD Oracle ''avec pattes d'oie'' pour chacun des MCD créés à l'[[exercice 3.1|3.Exercices]].</pre>
+<div created="20220906152045067" modified="20220906152222021" tags="[[04 Modèles logiques et physiques]]" title="4.Exercices">
+<pre>&gt; ''ATTENTION!''
+&gt; //Vous ''devez'' présenter le résultat des exercices ci-dessous à la satisfaction de votre enseignant qui en effectuera l'évaluation.//
+
+# Créez un MPD Oracle ''avec pattes d'oie'' pour chacun des MCD créés à l'[[exercice 3.1|3.Exercices]].</pre>
 </div>
 <div bag="default" created="20210204012330314" modified="20230821133335996" revision="0" tags="[[ZZ Anciens cours]]" title="4.ZZExercices" type="text/vnd.tiddlywiki">
 <pre># À partir du même schéma utilisé en [[3.Exercices|3.Exercices]], et en utilisant le synonyme ''pays'', créer une requête utilisant une vue interne appelée ''ivw_pays_asie'' retournant tous les pays d'Asie.
@@ -12124,10 +12118,13 @@ WHERE
     livreur = 'Jean Latour';
 ```</pre>
 </div>
-<div created="20220912125756392" modified="20230829014359748" tags="[[05 Sous-requêtes]]" title="5.Exercices">
-<pre>En préparation, effectuez les opérations suivantes:
+<div created="20220912125756392" modified="20220921192745340" tags="[[05 Sous-requêtes]]" title="5.Exercices">
+<pre>&gt; ''ATTENTION!''
+&gt; //Vous ''devez'' présenter le résultat des exercices ci-dessous à la satisfaction de votre enseignant qui en effectuera l'évaluation.//
 
-* Téléchargez ce [[fichier zip oracle-sample-database|https://lecegeplimoilou-my.sharepoint.com/personal/francois_duguay_cegeplimoilou_ca/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ffrancois%5Fduguay%5Fcegeplimoilou%5Fca%2FDocuments%2F420%2D383%2DLI%20BD2%20A2023%20%28FDG%29%2FDonn%C3%A9es%2Foracle%2Dsample%2Ddatabase%2Ezip&amp;parent=%2Fpersonal%2Ffrancois%5Fduguay%5Fcegeplimoilou%5Fca%2FDocuments%2F420%2D383%2DLI%20BD2%20A2023%20%28FDG%29%2FDonn%C3%A9es&amp;ga=1&amp;download=1]] et désarchivez-le. Il contient des scripts SQL pour créer un schéma Oracle ainsi qu'un modèle représentant ce schéma.
+En préparation, effectuez les opérations suivantes:
+
+* Téléchargez ce [[fichier zip|https://lecegeplimoilou-my.sharepoint.com/:u:/g/personal/eric_martel_cegeplimoilou_ca/EYeR9hXIUMhFsMHh1oBg974B0v4Rl-X41ONJohU1ROwwFQ?e=9jZ071&amp;download=1]] et désarchivez-le. Il contient des scripts SQL pour créer un schéma Oracle ainsi qu'un modèle représentant ce schéma.
 *&gt; //À noter que le schéma en question suit un vieux modèle conçu selon d'anciennes façons de faire; nous allons nous en contenter pour le moment.//
 
 * Dans //Oracle SQL Developer//, exécutez d'abord le script `ot_create_user.sql` dans un schéma privilégié; ce script créera le schéma //exercice5_1// avec le mot de passe //abc123//. Créez ensuite une connexion sur ce schéma et connectez-y vous avant d'exécuter d'autres scripts.
