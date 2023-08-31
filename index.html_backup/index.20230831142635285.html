@@ -9371,8 +9371,8 @@ Error message and password prompt
 <div created="20220913132653974" modified="20220926151612571" title="$:/state/toc/Table des matières-06 Jointures--249536019">
 <pre>close</pre>
 </div>
-<div created="20220913132253927" modified="20230831151238841" title="$:/state/toc/Table des matières-06 Jointures-1329480811">
-<pre>open</pre>
+<div created="20220913132253927" modified="20230831020539965" title="$:/state/toc/Table des matières-06 Jointures-1329480811">
+<pre>close</pre>
 </div>
 <div created="20220919153751294" modified="20220926151614242" title="$:/state/toc/Table des matières-07 Normalisation--249536019">
 <pre>close</pre>
@@ -9539,7 +9539,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="Semainier 3.Exercices [[3.02 Modèle conceptuel de données (MCD)]] [[3.04 Représentation graphique d'un MCD]] [[3.05 Logiciels MCD]] [[3.06 Associations avec attributs]] [[3.07 Associations cycliques]] [[3.08 Entité vs attribut]] [[3.09 Entités de même nature]] [[4.01 Modèle logique de données (MLD)]] [[4.02 Modèle relationnel de données (MRD)]] [[5.01 Théorie]] [[07 Normalisation]] [[7.01 Théorie]] [[3.03 Méthode de modélisation MCD]]" title="$:/StoryList">
+<div list="Semainier [[Table des matières]] 3.Exercices 4.Exercices [[3.03 Méthode de modélisation MCD]] [[3.05 Logiciels MCD]] [[3.04 Représentation graphique d'un MCD]] [[4.01 Modèle logique de données (MLD)]] [[4.02 Modèle relationnel de données (MRD)]] [[4.03 Modèle physique de données (MPD)]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20210506132122141" title="$:/temp/advancedsearch">
@@ -11664,30 +11664,22 @@ Une autre façon serait de créer une entité «Rôle» qui viendrait lister les
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/b1bf73b7-447d-4b5c-ab77-1215a55576ee?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;&lt;br&gt;https://web.microsoftstream.com/video/b1bf73b7-447d-4b5c-ab77-1215a55576ee</pre>
 </div>
-<div created="20220829185226472" modified="20230831160743674" tags="[[03 Modélisation conceptuelle]]" title="3.Exercices">
+<div created="20220829185226472" modified="20230829015318833" tags="[[03 Modélisation conceptuelle]]" title="3.Exercices">
 <pre>Vous pouvez vous mettre en équipe de 2 ou 3 pour l'exercice. 
 
 * Vous allez créer un MCD graphique ''avec pattes d'oie'' pour une des situations suivantes (vous devez imaginer les entités, attributs, etc.):
 **une compagnie d'assurance automobile. Chaque voiture est assurée pour une personne;
 **une bibliothèque avec prêt de livres à des membres. Les livres ont des catégories;
+**une structure administrative d'entreprise. Des employés peut être supervisé par un autre employé.
 
-
-Suiver les étapes de création d'un MCD:
-
- 
-# Lister les propriétés du système d'information à modaliser
-# Vérifier la sémantique 
-#* (tri des synonymes (ex : « No client » vs « Code client ») et des polysèmes (propriété pouvant prendre plusieurs sens) (ex : « No tel » vs « No tel résidence vs No tel affaire »)
-# Repérer les entités
-# Affecter chaque propriété à son entité 
-# Repérer la ou (les) propriétés IDENTIFIANTES
-# Identifier les relations
-# Indiquer les cardinalités
-# Valider avec votre équipe et avec le client(votre enseignant pour le moment)
-
-Finalement, créer 3 requêtes simples pour interroger votre modèle relationnel. </pre>
+# Commencer par Identifier une liste d'entités pertinentes pour votre scénario. Vérifier avec votre enseignant.
+# Identifier les attributs clés et les contraintes pour chaque entité.
+# Identifier les relations entre les entités.
+# Créer un MCD graphique avec les entités, les contraintes et les relations identifiées.
+# Finalement, créer 3 requêtes simples pour interroger votre modèle relationnel. Vérifier avec votre enseignant.
+</pre>
 </div>
-<div created="20220906144845791" modified="20230831153227406" tags="[[04 Modèles logiques et physiques]]" title="4.01 Modèle logique de données (MLD)">
+<div created="20220906144845791" modified="20220906145856883" tags="[[04 Modèles logiques et physiques]]" title="4.01 Modèle logique de données (MLD)">
 <pre>Après avoir complété un MCD, on passera au ''modèle logique de données (MLD)'', soit une conversion du MCD sous une forme qui se rapprochera du type de BD visé (relationnelle ou autre), sans toutefois se préoccuper du logiciel ou serveur de BD spécifique qui sera utilisé au final.
 
 Il faut savoir qu'il y a plusieurs types de BD:
@@ -11697,7 +11689,10 @@ Il faut savoir qu'il y a plusieurs types de BD:
 * relationnelles (à peu près tout le reste...)
 
 Comme les BD relationnelles sont de loin les plus utilisées et répandues, ce cours se concentre sur ces dernières, de sorte que le modèle logique que nous utiliserons sera le ''[[modèle relationnel de données (MRD)|4.02 Modèle relationnel de données (MRD)]]''.
-</pre>
+
+---
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/4f6d3e19-6287-4ff3-b942-793f5c338456?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
 <div created="20220906145021952" modified="20230820183012894" tags="[[04 Modèles logiques et physiques]]" title="4.02 Modèle relationnel de données (MRD)">
 <pre>Le ''modèle relationnel de données (MRD)'' tire son nom du concept de relation dans la théorie des ensembles en mathématiques, dans laquelle une relation est en fait (en très résumé) un sous-ensemble d'éléments.
