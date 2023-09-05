@@ -9541,7 +9541,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="Semainier [[Table des matières]] 3.Exercices [[4.01 Modèle logique de données (MLD)]] [[3.02 Modèle conceptuel de données (MCD)]] [[3.03 Méthode de modélisation MCD]] [[4.02 Modèle relationnel de données (MRD)]] [[4.03 Modèle physique de données (MPD)]] [[4.04 Conventions reliées aux bases de données]] 4.Exercices" title="$:/StoryList">
+<div list="3.Exemple Semainier [[Table des matières]] 5.Exercices 4.Exercices [[4.01 Modèle logique de données (MLD)]] [[4.02 Modèle relationnel de données (MRD)]] [[4.03 Modèle physique de données (MPD)]] [[4.04 Conventions reliées aux bases de données]] [[03 Modélisation conceptuelle]] [[2.01 Langage SQL]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20210506132122141" title="$:/temp/advancedsearch">
@@ -11667,8 +11667,8 @@ Une autre façon serait de créer une entité «Rôle» qui viendrait lister les
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/b1bf73b7-447d-4b5c-ab77-1215a55576ee?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;&lt;br&gt;https://web.microsoftstream.com/video/b1bf73b7-447d-4b5c-ab77-1215a55576ee</pre>
 </div>
-<div created="20230904195057038" modified="20230904203816911" tags="[[03 Modélisation conceptuelle]]" title="3.Exemple">
-<pre>Gestion de Projets Informatiques
+<div created="20230904195057038" modified="20230904195728652" tags="[[03 Modélisation conceptuelle]]" title="3.Exemple">
+<pre>Contexte : Gestion de Projets Informatiques
 
 Une entreprise de développement de logiciels, &quot;TechSolutions Inc.&quot;, gère plusieurs projets informatiques. Chaque projet est composé d'une équipe de programmeurs dirigée par un chef de projet. Les chefs de projet sont responsables de la gestion globale du projet, y compris la planification, l'allocation des ressources et la communication avec les clients. Les programmeurs sont chargés de développer le code nécessaire pour chaque projet.
 
@@ -11772,11 +11772,11 @@ C'est également ici qu'on jugera de la pertinence de créer des [[index]]. On p
 # on identifie les index qui devraient être utiles.
 </pre>
 </div>
-<div created="20220906145314672" modified="20230904205330870" tags="[[04 Modèles logiques et physiques]]" title="4.04 Conventions reliées aux bases de données">
+<div created="20220906145314672" modified="20230904191813164" tags="[[04 Modèles logiques et physiques]]" title="4.04 Conventions reliées aux bases de données">
 <pre>! Conventions de nomenclature des objets de BD
-!! 1. Tous les noms de tables au pluriel et les noms des champs au singulier
+!! 1. Tous les noms de tables et de champs au singulier
 
-Les noms de table au pluriel en base de données sont préférés pour leur clarté, cohérence et lisibilité. Ils facilitent l'écriture de requêtes SQL, évitent les conflits de noms, sont compatibles avec les ORM, et permettent une traduction plus naturelle.
+Bien qu'il soit fréquent de rencontrer des tables avec des noms au pluriel (p.ex., table «clients»), il est conseillé de plutôt toujours mettre les noms au singulier afin d'assurer une meilleur cohérence logique avec les modèles objet où une table joue le rôle d'une classe.
 
 !! 2. Tous les noms de tables et de champs avec des caractères simples
 
@@ -11792,7 +11792,7 @@ Il est recommandé, même si on n'en voit pas la nécessité, de toujours avoir 
 
 Bien que certains logiciels ou serveurs de BD soient insensibles à la casse, il est recommandé de toujours mettre les noms de tables et de champs en minuscules dans un souci d'uniformité.
 
-&gt; //Oracle fait cependant figure d'exception pour cette règle, puisque tous les objets y sont présentés en majuscules; dans un script pour Oracle, vous aurez donc la liberté de mettre vos noms d'objets en majuscules ou en minuscules, pourvu que les mots réservés SQL soient dans la casse opposée.//
+&gt; //Oracle fait cependant figure d'exception pour cette règle, puisque tous les objets y sont présentés en majuscules; dans un script pour Oracle, vous aurez donc la liberté de mettre vos noms d'objets en majuscules ou en minuscules, pourvu que les mots résservés SQL soient dans la casse opposée.//
 
 Dans les BD sensibles à la casse où l'on serait tenté d'utiliser le «lettrage en chameau» (~CamelCase, p.ex. «~DateVente»), on favorisera plutôt l'utilisation du trait souligné afin d'assurer une plus grande compatibilité entre systèmes (de sorte qu'on favorisera plutôt «date_vente», p.ex.).
 
@@ -11910,12 +11910,8 @@ FROM
     vw_pays_asie;
 ```</pre>
 </div>
-<div created="20220906152045067" modified="20230905035638749" tags="[[04 Modèles logiques et physiques]]" title="4.Exercices">
-<pre># Créez un MPD Oracle ''avec pattes d'oie'' pour les MCD suivants:
-
-[img[mcd exercice 4.png]]
-
-# Créez un MPD Oracle ''avec pattes d'oie'' pour le MCD créés à l'[[exercice 3.1|3.Exercices]].</pre>
+<div created="20220906152045067" modified="20230831014002878" tags="[[04 Modèles logiques et physiques]]" title="4.Exercices">
+<pre># Créez un MPD Oracle ''avec pattes d'oie'' pour le MCD créés à l'[[exercice 3.1|3.Exercices]].</pre>
 </div>
 <div bag="default" created="20210204012330314" modified="20230821133335996" revision="0" tags="[[ZZ Anciens cours]]" title="4.ZZExercices" type="text/vnd.tiddlywiki">
 <pre># À partir du même schéma utilisé en [[3.Exercices|3.Exercices]], et en utilisant le synonyme ''pays'', créer une requête utilisant une vue interne appelée ''ivw_pays_asie'' retournant tous les pays d'Asie.

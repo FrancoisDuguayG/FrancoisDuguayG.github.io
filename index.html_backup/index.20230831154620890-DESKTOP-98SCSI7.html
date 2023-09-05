@@ -483,8 +483,6 @@ Error message and password prompt
 
 <li>3.09 Entités de même nature</li>
 
-<li>3.Exemple</li>
-
 <li>3.Exercices</li>
 
 <li>4.01 Modèle logique de données (MLD)</li>
@@ -9541,7 +9539,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="Semainier [[Table des matières]] 3.Exercices [[4.01 Modèle logique de données (MLD)]] [[3.02 Modèle conceptuel de données (MCD)]] [[3.03 Méthode de modélisation MCD]] [[4.02 Modèle relationnel de données (MRD)]] [[4.03 Modèle physique de données (MPD)]] [[4.04 Conventions reliées aux bases de données]] 4.Exercices" title="$:/StoryList">
+<div list="Semainier 3.Exercices [[3.02 Modèle conceptuel de données (MCD)]] [[3.04 Représentation graphique d'un MCD]] [[3.05 Logiciels MCD]] [[3.06 Associations avec attributs]] [[3.07 Associations cycliques]] [[3.08 Entité vs attribut]] [[3.09 Entités de même nature]] [[4.01 Modèle logique de données (MLD)]] [[4.02 Modèle relationnel de données (MRD)]] [[5.01 Théorie]] [[07 Normalisation]] [[7.01 Théorie]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20210506132122141" title="$:/temp/advancedsearch">
@@ -11306,7 +11304,7 @@ Il est très fréquent, pour toutes sortes de raisons (pour des raisons de coût
 <div created="20221114185714255" modified="20221121202446196" tags="[[14 Copie et transfert de données]]" title="14.Exercices">
 <pre># En suivant les instructions de la vidéo de la section 14.01, exportez votre schéma final du TP3 avec SQL Developer et importez-le dans un nouveau schéma (ayant un autre nom).</pre>
 </div>
-<div bag="default" created="20210210185645410" list="" modified="20230904203021581" revision="0" tags="[[02 Quelques particularités d'Oracle vs MySQL/MariaDB]]" title="2.01 Langage SQL" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210210185645410" list="" modified="20230819181617060" revision="0" tags="[[02 Quelques particularités d'Oracle vs MySQL/MariaDB]]" title="2.01 Langage SQL" type="text/vnd.tiddlywiki">
 <pre>| | !~MariaDB/~MySQL | !Oracle |
 | !Ligne de commande | Commande «mysql» | Commande «sqlplus» |
 | !Base de données | Ensemble de tables et autres objets | Ensemble de schémas, lesquels sont des ensemble des tables et autres objets |
@@ -11325,7 +11323,6 @@ Il est très fréquent, pour toutes sortes de raisons (pour des raisons de coût
 | !GROUP BY | Peut utiliser moins de définitions de colonnes que dans le SELECT; les alias ne sont pas autorisés | Doit contenir toutes les définitions de colonnes du SELECT, sauf celles utilisées dans les fonctions de regroupement (les alias ne sont pas non plus autorisés) |
 | !Insérer manuellement plusieurs lignes d'un coup |INSERT INTO nom_table&lt;br /&gt;&amp;nbsp;&amp;nbsp;(col1, col2)&lt;br /&gt;VALUES&lt;br/&gt;&amp;nbsp;&amp;nbsp;(v11, v12),&lt;br/&gt;&amp;nbsp;&amp;nbsp;(v21, v22); |INSERT INTO nom_table&lt;br /&gt;&amp;nbsp;&amp;nbsp;(col1, col2)&lt;br /&gt;SELECT v11, v12 FROM dual&lt;br/&gt;UNION ALL&lt;br /&gt;SELECT v21, v22 FROM dual|
 | !Concaténation de colonnes/chaînes | ''CONCAT()'' | ''CONCAT()'' ou l'opérateur `||` |
-| !Limit | ''LIMIT 5'' | ''FETCH NEXT 5 ROWS ONLY''  |
 
 ---
 
@@ -11667,23 +11664,13 @@ Une autre façon serait de créer une entité «Rôle» qui viendrait lister les
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/b1bf73b7-447d-4b5c-ab77-1215a55576ee?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;&lt;br&gt;https://web.microsoftstream.com/video/b1bf73b7-447d-4b5c-ab77-1215a55576ee</pre>
 </div>
-<div created="20230904195057038" modified="20230904203816911" tags="[[03 Modélisation conceptuelle]]" title="3.Exemple">
-<pre>Gestion de Projets Informatiques
-
-Une entreprise de développement de logiciels, &quot;TechSolutions Inc.&quot;, gère plusieurs projets informatiques. Chaque projet est composé d'une équipe de programmeurs dirigée par un chef de projet. Les chefs de projet sont responsables de la gestion globale du projet, y compris la planification, l'allocation des ressources et la communication avec les clients. Les programmeurs sont chargés de développer le code nécessaire pour chaque projet.
-
-Chaque employé de TechSolutions Inc. a un nom unique, un identifiant d'employé et un salaire. Les chefs de projet ont également un nom unique, un identifiant d'employé et un salaire et peuvent superviser plusieurs programmeurs.
-
-Chaque projet est identifié par un numéro de projet, un nom de projet, une date de début et une date de fin prévues. 
-
-Pour calculer le coût total de chaque projet, il est nécessaire de prendre en compte les salaires des programmeurs qui y travaillent, ainsi que le salaire du chef de projet responsable du projet. Le coût total du projet est calculé en additionnant les salaires de tous les employés impliqués dans le projet, y compris le chef de projet et les programmeurs.</pre>
-</div>
-<div created="20220829185226472" modified="20230831160743674" tags="[[03 Modélisation conceptuelle]]" title="3.Exercices">
+<div created="20220829185226472" modified="20230831154620797" tags="[[03 Modélisation conceptuelle]]" title="3.Exercices">
 <pre>Vous pouvez vous mettre en équipe de 2 ou 3 pour l'exercice. 
 
 * Vous allez créer un MCD graphique ''avec pattes d'oie'' pour une des situations suivantes (vous devez imaginer les entités, attributs, etc.):
 **une compagnie d'assurance automobile. Chaque voiture est assurée pour une personne;
 **une bibliothèque avec prêt de livres à des membres. Les livres ont des catégories;
+**une structure administrative d'entreprise. Des employés peut être supervisé par un autre employé.
 
 
 Suiver les étapes de création d'un MCD:
@@ -11713,7 +11700,7 @@ Il faut savoir qu'il y a plusieurs types de BD:
 Comme les BD relationnelles sont de loin les plus utilisées et répandues, ce cours se concentre sur ces dernières, de sorte que le modèle logique que nous utiliserons sera le ''[[modèle relationnel de données (MRD)|4.02 Modèle relationnel de données (MRD)]]''.
 </pre>
 </div>
-<div created="20220906145021952" modified="20230904191712717" tags="[[04 Modèles logiques et physiques]]" title="4.02 Modèle relationnel de données (MRD)">
+<div created="20220906145021952" modified="20230820183012894" tags="[[04 Modèles logiques et physiques]]" title="4.02 Modèle relationnel de données (MRD)">
 <pre>Le ''modèle relationnel de données (MRD)'' tire son nom du concept de relation dans la théorie des ensembles en mathématiques, dans laquelle une relation est en fait (en très résumé) un sous-ensemble d'éléments.
 
 Contrairement à ce que plusieurs croient, une relation en BD n'est donc pas un lien (une association ou jointure) entre deux tables, mais bien une table elle-même, puisqu'une table est un sous-ensemble des données d'une BD.
@@ -11749,9 +11736,14 @@ Voici les étapes de conversion d'un MCD en MRD:
 # on identifie le type générique de chacun des champs (texte, nombre entier, nombre réel, date-heure, binaire, etc.);
 
 # tous les champs ajoutés aux fins de représentation d'association sont appelés ''clefs étrangères'', qu'on identifiera comme tels dans le MRD.
-</pre>
+
+---
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/ccc99bdc-5f89-4e68-8d6d-8ad0f708f849?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/a92e4cf3-882e-477f-a7ad-b7454adf043b?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20220906145432921" modified="20230904191744616" tags="[[04 Modèles logiques et physiques]]" title="4.03 Modèle physique de données (MPD)">
+<div created="20220906145432921" modified="20220906145451064" tags="[[04 Modèles logiques et physiques]]" title="4.03 Modèle physique de données (MPD)">
 <pre>Passer au ''modèle physique de données (MPD)'' consiste à convertir le MRD sous une forme qui sera spécifiquement reconnue par un logiciel ou serveur de BD en particulier. Le principal travail ici consiste à convertir les types génériques des champs du MRD en types spécifiques au logiciel ou serveur de BD visé.
 
 Par exemple, si on traduit pour SQLite, un type générique «texte» deviendra simplement «TEXT»; si c'est plutôt pour ~MySQL, il faudra se demander si le texte sera court et de taille fixe (CHAR), court et de taille variable (VARCHAR), de taille moyenne (TEXT) ou très long (LONGTEXT).
@@ -11770,13 +11762,16 @@ C'est également ici qu'on jugera de la pertinence de créer des [[index]]. On p
 # les tables doivent respecter les contraintes de clefs primaires, étrangères et uniques déterminées dans le MRD, ainsi que les contraintes de champs obligatoires (non NULL);
 
 # on identifie les index qui devraient être utiles.
-</pre>
-</div>
-<div created="20220906145314672" modified="20230904205330870" tags="[[04 Modèles logiques et physiques]]" title="4.04 Conventions reliées aux bases de données">
-<pre>! Conventions de nomenclature des objets de BD
-!! 1. Tous les noms de tables au pluriel et les noms des champs au singulier
 
-Les noms de table au pluriel en base de données sont préférés pour leur clarté, cohérence et lisibilité. Ils facilitent l'écriture de requêtes SQL, évitent les conflits de noms, sont compatibles avec les ORM, et permettent une traduction plus naturelle.
+---
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/5e88a2cd-95de-4452-8c21-220ce638d0ce?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
+</div>
+<div created="20220906145314672" modified="20230820183208282" tags="[[04 Modèles logiques et physiques]]" title="4.04 Conventions reliées aux bases de données">
+<pre>! Conventions de nomenclature des objets de BD
+!! 1. Tous les noms de tables et de champs au singulier
+
+Bien qu'il soit fréquent de rencontrer des tables avec des noms au pluriel (p.ex., table «clients»), il est conseillé de plutôt toujours mettre les noms au singulier afin d'assurer une meilleur cohérence logique avec les modèles objet où une table joue le rôle d'une classe.
 
 !! 2. Tous les noms de tables et de champs avec des caractères simples
 
@@ -11792,7 +11787,7 @@ Il est recommandé, même si on n'en voit pas la nécessité, de toujours avoir 
 
 Bien que certains logiciels ou serveurs de BD soient insensibles à la casse, il est recommandé de toujours mettre les noms de tables et de champs en minuscules dans un souci d'uniformité.
 
-&gt; //Oracle fait cependant figure d'exception pour cette règle, puisque tous les objets y sont présentés en majuscules; dans un script pour Oracle, vous aurez donc la liberté de mettre vos noms d'objets en majuscules ou en minuscules, pourvu que les mots réservés SQL soient dans la casse opposée.//
+&gt; //Oracle fait cependant figure d'exception pour cette règle, puisque tous les objets y sont présentés en majuscules; dans un script pour Oracle, vous aurez donc la liberté de mettre vos noms d'objets en majuscules ou en minuscules, pourvu que les mots résservés SQL soient dans la casse opposée.//
 
 Dans les BD sensibles à la casse où l'on serait tenté d'utiliser le «lettrage en chameau» (~CamelCase, p.ex. «~DateVente»), on favorisera plutôt l'utilisation du trait souligné afin d'assurer une plus grande compatibilité entre systèmes (de sorte qu'on favorisera plutôt «date_vente», p.ex.).
 
@@ -11870,7 +11865,11 @@ VALUES (
 
 !! 6. Commentaires de table et de colonnes
 
-Toujours insérer des commentaires de table et de colonne (avec ''COMMENT'').</pre>
+Toujours insérer des commentaires de table et de colonne (avec ''COMMENT'').
+
+---
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/66d8b261-2f93-41ed-860a-85f89ed65b7f?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
 <div bag="default" created="20210210152922511" modified="20210210154929474" revision="0" title="4.1 Solution" type="text/vnd.tiddlywiki">
 <pre>```sql
@@ -11910,12 +11909,8 @@ FROM
     vw_pays_asie;
 ```</pre>
 </div>
-<div created="20220906152045067" modified="20230905035638749" tags="[[04 Modèles logiques et physiques]]" title="4.Exercices">
-<pre># Créez un MPD Oracle ''avec pattes d'oie'' pour les MCD suivants:
-
-[img[mcd exercice 4.png]]
-
-# Créez un MPD Oracle ''avec pattes d'oie'' pour le MCD créés à l'[[exercice 3.1|3.Exercices]].</pre>
+<div created="20220906152045067" modified="20230831014002878" tags="[[04 Modèles logiques et physiques]]" title="4.Exercices">
+<pre># Créez un MPD Oracle ''avec pattes d'oie'' pour le MCD créés à l'[[exercice 3.1|3.Exercices]].</pre>
 </div>
 <div bag="default" created="20210204012330314" modified="20230821133335996" revision="0" tags="[[ZZ Anciens cours]]" title="4.ZZExercices" type="text/vnd.tiddlywiki">
 <pre># À partir du même schéma utilisé en [[3.Exercices|3.Exercices]], et en utilisant le synonyme ''pays'', créer une requête utilisant une vue interne appelée ''ivw_pays_asie'' retournant tous les pays d'Asie.
@@ -12135,10 +12130,10 @@ WHERE
     livreur = 'Jean Latour';
 ```</pre>
 </div>
-<div created="20220912125756392" modified="20230901200949739" tags="[[05 Sous-requêtes]]" title="5.Exercices">
+<div created="20220912125756392" modified="20230829014359748" tags="[[05 Sous-requêtes]]" title="5.Exercices">
 <pre>En préparation, effectuez les opérations suivantes:
 
-* Téléchargez ce [[fichier zip oracle-sample-database|https://lecegeplimoilou-my.sharepoint.com/:u:/g/personal/francois_duguay_cegeplimoilou_ca/EcOQyPgNXwVHphsA1EGw6S8BadJZSv7U8xuxHRjQAeYbgw?e=ZZHabJ]] et désarchivez-le. Il contient des scripts SQL pour créer un schéma Oracle ainsi qu'un modèle représentant ce schéma.
+* Téléchargez ce [[fichier zip oracle-sample-database|https://lecegeplimoilou-my.sharepoint.com/personal/francois_duguay_cegeplimoilou_ca/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ffrancois%5Fduguay%5Fcegeplimoilou%5Fca%2FDocuments%2F420%2D383%2DLI%20BD2%20A2023%20%28FDG%29%2FDonn%C3%A9es%2Foracle%2Dsample%2Ddatabase%2Ezip&amp;parent=%2Fpersonal%2Ffrancois%5Fduguay%5Fcegeplimoilou%5Fca%2FDocuments%2F420%2D383%2DLI%20BD2%20A2023%20%28FDG%29%2FDonn%C3%A9es&amp;ga=1&amp;download=1]] et désarchivez-le. Il contient des scripts SQL pour créer un schéma Oracle ainsi qu'un modèle représentant ce schéma.
 *&gt; //À noter que le schéma en question suit un vieux modèle conçu selon d'anciennes façons de faire; nous allons nous en contenter pour le moment.//
 
 * Dans //Oracle SQL Developer//, exécutez d'abord le script `ot_create_user.sql` dans un schéma privilégié; ce script créera le schéma //exercice5_1// avec le mot de passe //abc123//. Créez ensuite une connexion sur ce schéma et connectez-y vous avant d'exécuter d'autres scripts.
@@ -12294,8 +12289,11 @@ Cela donne une requête plus concise et plus facile à lire, et potentiellement 
 &gt; ''ERRATUM''
 &gt; Veuillez noter que le script montré dans la vidéo ci-dessus montre erronément des `COMMENT ON TABLE` plutôt que des `COMMENT ON COLUMN` pour les colonnes (voir le script ci-dessus pour avoir la version corrigée).</pre>
 </div>
-<div created="20220912125916371" modified="20230904184130068" tags="[[06 Jointures]]" title="6.Exercices">
-<pre>En préparation, modifiez et réexécutez les scripts téléchargés à l'[[exercice 5|5.Exercices]] de manière à travailler dans un schéma nommé //exercices6//.
+<div created="20220912125916371" modified="20220913140510565" tags="[[06 Jointures]]" title="6.Exercices">
+<pre>&gt; ''ATTENTION!''
+&gt; //Vous ''devez'' présenter le résultat des exercices ci-dessous à la satisfaction de votre enseignant qui en effectuera l'évaluation.//
+
+En préparation, modifiez et réexécutez les scripts téléchargés à l'[[exercice 5|5.Exercices]] de manière à travailler dans un schéma nommé //exercices6//.
 
 # Réécrivez toutes les requêtes de l'exercice 5 de manière à vous débarraser de //*__''toutes''__*// les sous-requêtes (il vous faudra les remplacer par des jointures dans le FROM); les requêtes finales doivent évidemment donner les mêmes résultats.
 
@@ -13879,10 +13877,10 @@ Les clefs primaires et les clefs uniques sont toutes indexées par nature. Pour 
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20210927003228151" modified="20230901200800638" tags="" title="Semainier">
+<div created="20210927003228151" modified="20230821133157863" tags="" title="Semainier">
 <pre>| Semaine | Sections à étudier | Exercices / Travaux |h
 | 1 | 1.01 | 1.02, 1.03 |
-| 2 | 2, 3 et 5 | 3.1 et 5.1 |
+| 2 | 2 et 3 | 3.1 |
 | 3 | 4 | 4.1 |
 | 4  | 5, 6 | 5.1, 6.1 à 6.3, TP 1 |
 | 5  | 7, 1.04 | TP 1, 7.1 à 7.3  |
