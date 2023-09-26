@@ -635,6 +635,10 @@ Error message and password prompt
 
 <li>Exercice 6.1</li>
 
+<li>Exercice 7.</li>
+
+<li>Exercice 8.</li>
+
 <li>Glossaire</li>
 
 <li>index</li>
@@ -9526,8 +9530,8 @@ Error message and password prompt
 <div created="20220921192133979" modified="20230821132652553" title="$:/state/toc/Table des matières-99 Travaux pratiques-1329480811">
 <pre>open</pre>
 </div>
-<div created="20230914012006429" modified="20230915131753041" title="$:/state/toc/Table des matières-Corrigés-1329480811">
-<pre>close</pre>
+<div created="20230914012006429" modified="20230926032404088" title="$:/state/toc/Table des matières-Corrigés-1329480811">
+<pre>open</pre>
 </div>
 <div created="20220922180706338" modified="20220922180715601" title="$:/state/toc/Table des matières-Glossaire--249536019">
 <pre>close</pre>
@@ -9604,7 +9608,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="Semainier [[Table des matières]] [[6.02 Jointures et cardinalité]] 6.Exercices [[6.01 Théorie]] [[98 Rappels]] Glossaire Corrigés [[7.01 Théorie]] [[7.1 Exercice]] 8.Exercices 10.Exercices" title="$:/StoryList">
+<div list="[[Exercice 7.]] Semainier [[Table des matières]] [[8.01 Théorie]] 8.Exercices Corrigés [[7.01 Théorie]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20230914010443636" title="$:/temp/advancedsearch">
@@ -12521,7 +12525,7 @@ Pour chaque forme normale, vous devez expliquer les modifications à faire pour 
 
 &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/7538a285-029c-4df6-bca8-0249cb86963d?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20220919152749095" list="" modified="20220919153006567" tags="[[08 Vues]]" title="8.01 Théorie">
+<div created="20220919152749095" list="" modified="20230925121821725" tags="[[08 Vues]]" title="8.01 Théorie">
 <pre>Dans Oracle, on distinguera dans ce cours deux types de vues, soit les ''vues stockées'' et les ''vues internes''.
 
 &gt; //À noter qu'il y a aussi des vues dites //matérialisées//, mais nous ne les verrons pas dans ce cours.//
@@ -12585,8 +12589,7 @@ SELECT * FROM vw_ameri_euro
 /* Retourne les pays d'Europe et d'Amérique */
 ;
 ```
-
-&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/3a88451d-0d1b-4229-b51b-98a72a911c57?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;</pre>
+</pre>
 </div>
 <div bag="default" created="20200417055543463" list="" modified="20210408102507825" revision="0" tags="[[08 MySQL]]" title="8.02 Procédures" type="text/vnd.tiddlywiki">
 <pre>&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://web.microsoftstream.com/embed/video/c2220599-0ca9-481e-8203-e5f297db3cc4?autoplay=false&amp;amp;showinfo=true&quot; allowfullscreen style=&quot;border:none;&quot;&gt;&lt;/iframe&gt;
@@ -12989,28 +12992,14 @@ GRANT SELECT ON nom_bd.vw_utilisateur TO nom_utilisateur;
 ```
 &lt;/div&gt;</pre>
 </div>
-<div created="20220922180934866" modified="20230821131617551" tags="[[08 Vues]]" title="8.Exercices">
-<pre># À partir du contenu des sections 1.03 et 1.04, vous constaterez que pour chaque livraison, on enregistre qui est le livreur, à quel restaurant a été passée la commande et les coordonnées du client. Notez que les numéros de commande sont associés à chaque restaurant unique (un restaurant unique étant composé d'un nom et d'une adresse) : donc chaque restaurant (chaque adresse) a ses propres numéros de commande internes.&lt;div&gt;
+<div created="20220922180934866" modified="20230926033826435" tags="[[08 Vues]]" title="8.Exercices">
+<pre>À partir des données de la ''oracle-sample-database'':
 
-À partir des fichiers fournis aux sections 1.03 et 1.04, vous devez écrire un seul script SQL pour Oracle qui :
+# ''Sans utiliser la table de données brutes'', créez une vue stockée appelée ''vw_ventes'' retournant les commandes de l'année 2015 avec les nom complet des clients et des vendeurs.
+#*[img[https://i.imgur.com/Ux5Jmk5.png]]
 
-# implémente l'exemple de solution MPD Oracle de l'exercice 1.03 des notes de cours;
-# insère les données du fichier fourni dans le schéma créé; pour ce faire, utilisez des INSERT SELECT à partir d'une table de données brutes, en tenant compte notamment du fait que vous NE POUVEZ entrer les clefs étrangères «id_*» à la main (pas plus que les clefs primaires «id», qui doivent être automatiques);
-# ''sans modifier la table de données brutes'', insère dans le schéma l'équivalent d'une ligne supplémentaire au fichier Excel où votre nom apparaît comme livreur ou livreuse (vous inventez le reste).
-
-Remarques supplémentaires :
-
-* N'oubliez pas de respecter toutes les conventions de la section 4.04 des notes de cours et de bien structurer votre code (aération et indentation)
-* L’ordre d’exécution des commandes n’est pas importante, tant que le tout se fasse de manière logique et cohérente et qu’au final on ait le résultat attendu.
-* Aux fins de simplification, vous pouvez supposer que le nom de chaque livreur est unique.
-* Vous n'avez pas à présumer (anticiper) l'existence de données autres que celles qui vous sont fournies.
-* N'oubliez pas d'inclure des commentaires de table (COMMENT ON TABLE), de colonne (COMMENT ON COLUMN) et de code.
-* Petit rappel : pour être 3NF, n’oubliez pas dans votre modèle de discriminer les données de nature différente!
-&lt;/div&gt;
-
-# ''Sans utiliser la table de données brutes'', créez une vue stockée appelée ''vw_commandes'' retournant l'équivalent en colonnes et en lignes du fichier de données d'origine, en plus de la ligne supplémentaire contenant votre nom, mais le tout par ordre alphabétique des noms de livreur; l’ordre et le nom des colonnes retournées sont importants.
-
-# Créez une requête retournant toutes les commandes livrées par Jean Latour en utilisant la vue créée ci-dessus.</pre>
+# Créez une requête qui affiche les prénoms des employés et des clients regroupés dans une colonne et qui indique le nombre de prénoms identiques. Votre requête ne doit afficher que les prénoms qui ont plusieurs occurrences (&gt;1) et elle doit utiliser une vue interne pour regrouper (UNION ALL) les prénoms des tables.
+#* [img[https://i.imgur.com/UofVGVj.png]]</pre>
 </div>
 <div bag="default" created="20210210161728511" list="" modified="20230821133735546" revision="0" tags="[[09 Fonctions SQL avancées]]" title="9.01 Expressions régulières" type="text/vnd.tiddlywiki">
 <pre>Oracle supporte dans une certaines mesure les [[expressions régulières|https://docs.oracle.com/en/database/oracle/oracle-database/21/adfns/regexp.html#GUID-1935FD80-A3CD-413F-BD2E-BBEFE64000B2]] (aussi généralement appelées « //regex// », contraction de l'anglais //regular expression//).
@@ -14251,7 +14240,7 @@ FROM li_livres
 INNER JOIN ca_categories ON li_ca_id = ca_id
 GROUP BY ca_nom;</pre>
 </div>
-<div created="20230914011655476" list="" modified="20230914012052507" tags="Corrigés" title="Exercice 5.1">
+<div created="20230914011655476" list="" modified="20230926032413366" tags="Corrigés" title="Exercice 5.1">
 <pre>```sql
 --Exercie 5.1.1
 --Obtenir la liste des commandes faite par le client &quot;Raytheon&quot; par ordre croissant de la date de commande
@@ -14497,6 +14486,67 @@ GROUP BY
 ORDER BY
     &quot;Id produit&quot;
 ;
+</pre>
+</div>
+<div created="20230926040405707" modified="20230926040437514" tags="Corrigés" title="Exercice 7.">
+<pre>[[Solution|https://lecegeplimoilou-my.sharepoint.com/:x:/g/personal/francois_duguay_cegeplimoilou_ca/EZjVpSTjKXhJuNC9tfmlpgQBbhhNZ277DgPfZPcKavJjjA?e=9GXDRM]]</pre>
+</div>
+<div created="20230926032357051" modified="20230926033835305" tags="Corrigés" title="Exercice 8.">
+<pre>```sql
+-- Question 1
+-- réez une vue stockée appelée ''vw_ventes'' retournant les commandes
+-- de l'année 2015 avec les nom complet des clients et des vendeurs.
+
+CREATE OR REPLACE VIEW vw_ventes AS
+    SELECT
+        first_name || last_name           AS &quot;Nom vendeur&quot;,
+        customers.name                    AS &quot;Nom client&quot;,
+        to_char(order_date, 'yyyy-mm-dd') AS &quot;Date vente&quot;
+    FROM
+             orders
+        INNER JOIN customers ON orders.customer_id = customers.customer_id
+        INNER JOIN employees ON salesman_id = employee_id
+    WHERE
+        order_date BETWEEN DATE '2014-12-31' AND DATE '2015-12-31'
+    ORDER BY
+        order_date DESC;
+
+SELECT
+    *
+FROM
+    vw_ventes;
+
+-- Question 2
+/*
+Créez une requête qui affiche les prénoms des employés et des clients 
+regroupés dans une colonne et qui indique le nombre de prénoms identiques. 
+Votre requête ne doit afficher que les prénoms qui ont plusieurs 
+occurrences (&gt;1) et elle doit utiliser une vue interne pour regrouper 
+(UNION ALL) les prénoms des tables.
+*/
+
+WITH ivw_personnes AS (
+    SELECT
+        first_name
+    FROM
+        employees
+    UNION ALL
+    SELECT
+        first_name
+    FROM
+        contacts
+)
+SELECT
+    first_name,
+    COUNT(first_name)
+FROM
+    ivw_personnes
+GROUP BY
+    first_name
+HAVING
+    COUNT(first_name) &gt;= 2
+ORDER BY
+    COUNT(first_name) DESC;
 </pre>
 </div>
 <div bag="default" created="20181113131413318" modified="20181113131434698" revision="0" tags="[[Table des matières]]" title="Glossaire" type="text/vnd.tiddlywiki">
