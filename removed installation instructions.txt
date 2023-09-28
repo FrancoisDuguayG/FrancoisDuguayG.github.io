@@ -1,0 +1,32 @@
+<div hidden>
+
+Suivre les instructions de la vidéo ci-dessous pour importer et exécuter la machine sur votre ordinateur<div>
+
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/b477a7a9-34c7-40ab-b873-e6f96d3f71cb?autoplay=false&showinfo=true" allowfullscreen style="border:none;"></iframe><br>(Lien Stream de la vidéo: https://web.microsoftstream.com/video/b477a7a9-34c7-40ab-b873-e6f96d3f71cb)
+
+
+# Changer l'adresse IP du réseau VMnet8. Dans VMware: Edit > virtual network editor...
+
+# Changer l'adresse IP pour 192.168.153.0
+[img[vmware network.png]]
+
+<p class="boite">
+
+! ''IMPORTANT!!!''
+
+Si vous avez besoin de droits Admin pour changer le Subnet IP vous devezutiliser le compte suivant:
+
+Au local ''Q3516'' :
+
+*''Utilisateur : Admin.Q3516''
+*''Mot de passe : admin.q3516''
+
+Au local ''Q2516'' :
+
+*''Utilisateur : Admin.Q2516''
+*''Mot de passe : admin.q2516''
+</div>
+</p>
+</div>
+</div>
