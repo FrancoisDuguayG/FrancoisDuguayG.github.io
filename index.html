@@ -9536,7 +9536,7 @@ Error message and password prompt
 <div created="20220921192133979" modified="20230821132652553" title="$:/state/toc/Table des matières-99 Travaux pratiques-1329480811">
 <pre>open</pre>
 </div>
-<div created="20230914012006429" modified="20231003141020677" title="$:/state/toc/Table des matières-Corrigés-1329480811">
+<div created="20230914012006429" modified="20231003195702392" title="$:/state/toc/Table des matières-Corrigés-1329480811">
 <pre>close</pre>
 </div>
 <div created="20220922180706338" modified="20220922180715601" title="$:/state/toc/Table des matières-Glossaire--249536019">
@@ -9614,7 +9614,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="[[Exercices examen 1]] [[Exercice 8.]] [[01 Oracle XE]] [[Draft of '1.01 Introduction']] [[1.04 Importation de données avec SQL Developer]]" title="$:/StoryList">
+<div list="Semainier [[Table des matières]] [[Exercices examen 1]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20230914010443636" title="$:/temp/advancedsearch">
@@ -9633,7 +9633,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///Users/heros/Library/CloudStorage/OneDrive-Ce%CC%81gepLimoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/Heros/OneDrive%20-%20C%C3%A9gep%20Limoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9653,7 +9653,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/Users/heros/Library/CloudStorage/OneDrive-Ce%CC%81gepLimoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/Heros/OneDrive%20-%20C%C3%A9gep%20Limoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9665,11 +9665,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1440&quot;
+            &quot;text&quot;: &quot;1920&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;900&quot;
+            &quot;text&quot;: &quot;1080&quot;
         }
     }
 }</pre>
@@ -14556,32 +14556,29 @@ ORDER BY
     COUNT(first_name) DESC;
 </pre>
 </div>
-<div created="20231003141456048" modified="20231003145834071" tags="[[Table des matières]]" title="Exercices examen 1">
-<pre>''1.'' Exercice de Normalisation
-Imaginez que vous travaillez sur une base de données pour une bibliothèque. Vous avez une table de données appelée &quot;Livres&quot; avec les attributs suivants :
-ISBN
+<div created="20231003141456048" modified="20231003201456481" tags="[[Table des matières]]" title="Exercices examen 1">
+<pre>''1.'' Imaginez que vous travaillez sur une base de données pour une bibliothèque. Vous avez une table de données appelée &quot;Livres&quot; avec les attributs suivants :
 
+* ISBN (clé primaire)
 * Titre du livre
 * Auteur du livre
 * Date de publication
 * Genre du livre
-* Nom de l'emprunteur
+* Numéro de l'emprunteur
 * Date d'emprunt
 Sachant que :
 
 * L’auteur et le genre du livre dépendent du titre du livre
-* Un livre peut-être emprunter par plusieurs personnes.
-Votre tâche est de normaliser cette table pour chaque FN (garder des traces de vos démarches et justifier) et de construire sont MCD finale.
 
 ''2. ''Supposons que vous ayez 3 tables : une table &quot;Utilisateurs&quot;, une table &quot;adresses&quot; et une table &quot;Commandes&quot;.
  
 [img[https://i.imgur.com/jMfjQ4d.png]]
 
-''2.1 ''Effectuer un commande SQL avec une jointure de droite pour obtenir une liste de toutes les commandes avec les noms des utilisateurs correspondants (n’affichez pas les id).
+''2.1 ''Effectuer un commande SQL avec une jointure de droite pour obtenir toutes les commandes avec le nom des utilisateurs correspondants s'il existe (afficher tout).
 
-''2.2'' Effectuer une commande de jointure pour obtenir une liste de toutes les commandes faites par « john travolta » avec l’adresses et les montants (n’affichez pas les id).
+''2.2'' Effectuer une commande de jointure pour obtenir la liste de toutes les commandes faites par « john travolta » (afficher le code_postal, le prénom, le nom et le montant).
 
-''2.3'' Modifier la commande précédente pour obtenir la somme des montants (affichez l’adresse, le nom et la somme).
+''2.3'' Modifier la commande précédente pour obtenir la somme des montants (afficher le code_postal, le prénom, le nom et la somme des montants).
 
  
 
@@ -14589,14 +14586,14 @@ Votre tâche est de normaliser cette table pour chaque FN (garder des traces de 
 
 [img[https://i.imgur.com/ruROqEA.png]]
 
-''3.1 ''Ajouter au MPD une entité fournisseurs avec les champs : nom et adresse qui a une relation avec restaurant de plusieurs à plusieurs optionnelle.
+''3.1 ''Ajouter au MPD une entité &quot;fournisseurs&quot; avec les champs : nom et adresse. Elle doit avoir une relation de plusieurs à plusieurs optionnelle avec restaurants.
 
 ''3.2'' Donner le code SQL nécessaire pour créer la table fournisseurs et pour modifier la table restaurants.
 
-''3.3'' Sachant que &quot;SELECT DISTINCT prenom, nom&quot; permet de retourner seulement les combinaison prénom et nom unique.
+''3.3'' Sachant que &quot;SELECT DISTINCT prenom, nom&quot; permet de retourner seulement les combinaison prénom et nom unique dans une table.
 
 
-Créer une commande SQL, avec une sous requête, qui affiche le nombre de livreurs ayant livré au moins une commande pour chaque restaurant, afficher seulement le nombre de livreurs et le nom des restaurants.
+Créer une requête SQL, avec une sous requête, qui affiche le nombre de livreurs ayant livré au moins une commande pour chaque restaurant. Afficher seulement le nombre de livreurs et le nom des restaurants.
 
 </pre>
 </div>
