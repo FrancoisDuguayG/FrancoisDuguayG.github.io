@@ -9377,8 +9377,8 @@ Error message and password prompt
 <div created="20210822155502410" modified="20220830163041483" title="$:/state/toc/Table des matières-02 Quelques particularités d'Oracle vs MySQL/MariaDB--249536019">
 <pre>close</pre>
 </div>
-<div created="20221005123423822" modified="20231003141441209" title="$:/state/toc/Table des matières-02 Quelques particularités d'Oracle vs MySQL/MariaDB-1329480811">
-<pre>close</pre>
+<div created="20221005123423822" modified="20231005181004153" title="$:/state/toc/Table des matières-02 Quelques particularités d'Oracle vs MySQL/MariaDB-1329480811">
+<pre>open</pre>
 </div>
 <div created="20210830130207760" modified="20220829181009530" title="$:/state/toc/Table des matières-02 Rappels (à réviser au besoin)--249536019">
 <pre>close</pre>
@@ -9443,8 +9443,8 @@ Error message and password prompt
 <div created="20220919153751294" modified="20231002151410461" title="$:/state/toc/Table des matières-07 Normalisation--249536019">
 <pre>close</pre>
 </div>
-<div created="20230820182247152" modified="20230928042902007" title="$:/state/toc/Table des matières-07 Normalisation-1329480811">
-<pre>close</pre>
+<div created="20230820182247152" modified="20231005181232638" title="$:/state/toc/Table des matières-07 Normalisation-1329480811">
+<pre>open</pre>
 </div>
 <div created="20210401155011557" modified="20220823104853551" title="$:/state/toc/Table des matières-07 PL/SQL--249536019">
 <pre>close</pre>
@@ -9473,8 +9473,8 @@ Error message and password prompt
 <div created="20220919155229607" modified="20221005112820471" title="$:/state/toc/Table des matières-08 Vues--249536019">
 <pre>close</pre>
 </div>
-<div created="20220926150104124" modified="20231002134510520" title="$:/state/toc/Table des matières-08 Vues-1329480811">
-<pre>close</pre>
+<div created="20220926150104124" modified="20231005181229927" title="$:/state/toc/Table des matières-08 Vues-1329480811">
+<pre>open</pre>
 </div>
 <div created="20220921192115794" modified="20221025001351553" title="$:/state/toc/Table des matières-09 Fonctions SQL avancées--249536019">
 <pre>close</pre>
@@ -9536,8 +9536,8 @@ Error message and password prompt
 <div created="20220921192133979" modified="20230821132652553" title="$:/state/toc/Table des matières-99 Travaux pratiques-1329480811">
 <pre>open</pre>
 </div>
-<div created="20230914012006429" modified="20231003195702392" title="$:/state/toc/Table des matières-Corrigés-1329480811">
-<pre>close</pre>
+<div created="20230914012006429" modified="20231005184803484" title="$:/state/toc/Table des matières-Corrigés-1329480811">
+<pre>open</pre>
 </div>
 <div created="20220922180706338" modified="20220922180715601" title="$:/state/toc/Table des matières-Glossaire--249536019">
 <pre>close</pre>
@@ -9614,7 +9614,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="Semainier [[Table des matières]] [[Exercices examen 1]]" title="$:/StoryList">
+<div list="Semainier [[Table des matières]] [[Exercices examen 1]] [[2.02 La corbeille]] TP1" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20230914010443636" title="$:/temp/advancedsearch">
@@ -14556,7 +14556,7 @@ ORDER BY
     COUNT(first_name) DESC;
 </pre>
 </div>
-<div created="20231003141456048" modified="20231005180152705" tags="[[Table des matières]]" title="Exercices examen 1">
+<div created="20231003141456048" modified="20231005181325653" tags="[[Table des matières]]" title="Exercices examen 1">
 <pre>''1.'' Imaginez que vous travaillez sur une base de données pour une bibliothèque. Vous avez une table de données appelée &quot;livres_empruntes&quot; avec les attributs suivants :
 
 * ISBN 
@@ -14564,10 +14564,10 @@ ORDER BY
 * Auteur du livre
 * Numéro de l'emprunteur
 * Nom de l'emprunteur
-* 
+
 Sachant que :
 
-* L'ISBN identifie de manière univoque un livre
+* L'ISBN identifie de manière univoque un livre.
 
 ''1.1'' Qu'elle est le niveau de la forme normale (FN) de la table ci-dessus?
 
@@ -14605,6 +14605,8 @@ FROM ******
 
 
 Créer une requête SQL, avec une sous requête, qui affiche le nombre de livreurs ayant livré au moins une commande pour chaque restaurant. Afficher seulement le nombre de livreurs et le nom des restaurants.
+
+''4.'' Vrai ou faux, il est possible de récupérer une table effacer par DROP TABLE avec l'instruction FLASHBACK? 
 
 </pre>
 </div>
@@ -14723,7 +14725,7 @@ Complétez les exercices suivants:
 * 8.2 (30 %)
 * 8.3 (20 %)</pre>
 </div>
-<div created="20231003140612433" modified="20231003141300465" tags="Corrigés" title="TP1">
+<div created="20231003140612433" modified="20231005184955813" tags="Corrigés" title="TP1">
 <pre>```sql
 -- Suppression des tables
 DROP TABLE cp_commandes_produits CASCADE CONSTRAINTS;
@@ -14753,7 +14755,7 @@ CREATE TABLE cl_clients(
 --creation table livreurs
 CREATE TABLE li_livreurs(
     li_id  NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
-        li_telephone VARCHAR2(20),
+    li_telephone VARCHAR2(20),
     li_prenom VARCHAR2(100) NOT NULL,
     li_nom VARCHAR2(100) NOT NULL
 );
@@ -14990,7 +14992,7 @@ SELECT
     pr_nom AS &quot;Nom de produits&quot;,
     SUM(cp_quantite) AS &quot;Quantite total&quot;
 FROM pr_produits
-INNER JOIN cp_commandes_produits ON pr_produits.pr_id = cp_commandes_produits.cp_produits_id
+    INNER JOIN cp_commandes_produits ON pr_produits.pr_id = cp_commandes_produits.cp_produits_id
 GROUP BY pr_nom
 ORDER BY &quot;Quantite total&quot; DESC;
 ```</pre>
