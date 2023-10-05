@@ -9633,7 +9633,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/Heros/OneDrive%20-%20C%C3%A9gep%20Limoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
+            &quot;text&quot;: &quot;file:///Users/heros/Library/CloudStorage/OneDrive-Ce%CC%81gepLimoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9653,7 +9653,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/Heros/OneDrive%20-%20C%C3%A9gep%20Limoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
+            &quot;text&quot;: &quot;/Users/heros/Library/CloudStorage/OneDrive-Ce%CC%81gepLimoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9665,11 +9665,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1440&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;900&quot;
         }
     }
 }</pre>
@@ -14556,27 +14556,38 @@ ORDER BY
     COUNT(first_name) DESC;
 </pre>
 </div>
-<div created="20231003141456048" modified="20231003201456481" tags="[[Table des matières]]" title="Exercices examen 1">
-<pre>''1.'' Imaginez que vous travaillez sur une base de données pour une bibliothèque. Vous avez une table de données appelée &quot;Livres&quot; avec les attributs suivants :
+<div created="20231003141456048" modified="20231005180152705" tags="[[Table des matières]]" title="Exercices examen 1">
+<pre>''1.'' Imaginez que vous travaillez sur une base de données pour une bibliothèque. Vous avez une table de données appelée &quot;livres_empruntes&quot; avec les attributs suivants :
 
-* ISBN (clé primaire)
+* ISBN 
 * Titre du livre
 * Auteur du livre
-* Date de publication
-* Genre du livre
 * Numéro de l'emprunteur
-* Date d'emprunt
+* Nom de l'emprunteur
+* 
 Sachant que :
 
-* L’auteur et le genre du livre dépendent du titre du livre
+* L'ISBN identifie de manière univoque un livre
+
+''1.1'' Qu'elle est le niveau de la forme normale (FN) de la table ci-dessus?
+
+''1.2'' Normaliser les données en FN3 et produisez le MPD de la BD normalisée.
 
 ''2. ''Supposons que vous ayez 3 tables : une table &quot;Utilisateurs&quot;, une table &quot;adresses&quot; et une table &quot;Commandes&quot;.
  
 [img[https://i.imgur.com/jMfjQ4d.png]]
 
-''2.1 ''Effectuer un commande SQL avec une jointure de droite pour obtenir toutes les commandes avec le nom des utilisateurs correspondants s'il existe (afficher tout).
+''2.1 ''Complétez la commande SQL ci-dessous avec une jointure de droite. (
 
-''2.2'' Effectuer une commande de jointure pour obtenir la liste de toutes les commandes faites par « john travolta » (afficher le code_postal, le prénom, le nom et le montant).
+```sql
+SELECT
+    nom,
+    montant
+FROM ******
+**** JOIN ******
+```
+
+''2.2'' Effectuer une commande de jointure pour obtenir la liste de toutes les commandes faites par &quot;john travolta&quot; (afficher le code_postal, le prénom, le nom et le montant).
 
 ''2.3'' Modifier la commande précédente pour obtenir la somme des montants (afficher le code_postal, le prénom, le nom et la somme des montants).
 
