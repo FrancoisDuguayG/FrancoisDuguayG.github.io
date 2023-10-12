@@ -611,6 +611,8 @@ Error message and password prompt
 
 <li>98.02.02 Déroulement</li>
 
+<li>Corrigé exercices examen 1</li>
+
 <li>Corrigés</li>
 
 <li>css</li>
@@ -9243,7 +9245,7 @@ Error message and password prompt
     &quot;tiddlers&quot;: {
         &quot;Untitled&quot;: {
             &quot;title&quot;: &quot;Untitled&quot;,
-            &quot;text&quot;: &quot;https://blog.toadworld.com/hubfs/Imported_Blog_Media/7658_hot1_-2.png&quot;
+            &quot;text&quot;: &quot;```&quot;
         }
     }
 }</pre>
@@ -9332,8 +9334,8 @@ Error message and password prompt
 <div created="20210406102542046" modified="20230819180127531" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20210406102541021" modified="20230824141552254" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20210406102541021" modified="20231012190617211" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20230914010446143" modified="20230914010448348" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Standard</pre>
@@ -9536,8 +9538,8 @@ Error message and password prompt
 <div created="20220921192133979" modified="20230821132652553" title="$:/state/toc/Table des matières-99 Travaux pratiques-1329480811">
 <pre>open</pre>
 </div>
-<div created="20230914012006429" modified="20231005184803484" title="$:/state/toc/Table des matières-Corrigés-1329480811">
-<pre>open</pre>
+<div created="20230914012006429" modified="20231012183548333" title="$:/state/toc/Table des matières-Corrigés-1329480811">
+<pre>close</pre>
 </div>
 <div created="20220922180706338" modified="20220922180715601" title="$:/state/toc/Table des matières-Glossaire--249536019">
 <pre>close</pre>
@@ -9614,7 +9616,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="Semainier [[Table des matières]] TP1 [[Exercices examen 1]]" title="$:/StoryList">
+<div list="[[Corrigé exercices examen 1]] Semainier [[Table des matières]] [[Exercices examen 1]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20230914010443636" title="$:/temp/advancedsearch">
@@ -9633,7 +9635,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///Users/heros/Library/CloudStorage/OneDrive-Ce%CC%81gepLimoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/Heros/OneDrive%20-%20C%C3%A9gep%20Limoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9653,7 +9655,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/Users/heros/Library/CloudStorage/OneDrive-Ce%CC%81gepLimoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/Heros/OneDrive%20-%20C%C3%A9gep%20Limoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9665,11 +9667,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1440&quot;
+            &quot;text&quot;: &quot;1920&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;900&quot;
+            &quot;text&quot;: &quot;1080&quot;
         }
     }
 }</pre>
@@ -13891,6 +13893,98 @@ COMMIT;
 
 Dans Oracle, comme on n'est toujours dans une transaction, il suffit de mettre des COMMIT chaque fois que l'on désire valider les changements: pas besoin de BEGIN (qui signifie par ailleurs autre chose et est plutôt en lien avec le langage PL/SQL).</pre>
 </div>
+<div created="20231012185709053" modified="20231012192105979" tags="Corrigés" title="Corrigé exercices examen 1">
+<pre>''1.1'' 
+
+Elle est en forme normale 1, puisque la forme normale 2 n’est pas respectée. Il y une dépendance partielle entre le prénom de l’emprunteur et le numéro de l’emprunteur.
+
+''1.2''
+
+[img[https://i.imgur.com/rcsoF1T.png]]
+
+''2.1''
+
+```sql
+SELECT
+    nom,
+    montant
+FROM utilisateurs
+RIGHT JOIN commandes ON utilisateurs.id = commandes.utilisateur_id
+```
+
+''2.2''
+
+```sql
+SELECT
+    code_postal,
+    prenom,
+    nom,
+    montant
+FROM utilisateurs
+JOIN commandse ON utilisateurs.id = commandes.utilisateurs_id
+JOIN adresses ON utilisateurs.adresses_id = adresses.id
+WHERE utilisateurs.prenom = ‘john’ AND utilisateurs.nom = ‘travolta’
+
+```
+
+''2.3''
+
+```sql
+SELECT
+    code_postal,
+    prenom,
+    nom,
+    SUM(montant)
+FROM utilisateurs
+JOIN commandes ON utilisateurs.id = commandes.utilisateurs_id
+JOIN adresses ON utilisateurs.adresses_id = adresses.id
+WHERE utilisateurs.prenom = ‘john’ AND utilisateurs.nom = ‘travolta’
+GROUP BY code_postal, prenom, nom
+
+```
+
+''3.1''
+
+Le reste du MCD est inchangé.
+
+[img[https://i.imgur.com/3n2zuy2.png]]
+
+''3.2''
+
+```sql
+CREATE TABLE fournisseurs (
+    id NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
+    nom VARCHAR2(100),
+    adresse VARCHAR2(100)
+)
+
+CREATE TABLE fournisseurs_restaurants (
+    id NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
+    fournisseurs_id NUMBER REFERENCES fournisseurs(id),
+    restaurants_id NUMBER REFERENCES restaurants(id)
+)
+```
+
+''3.3''
+
+```sql
+SELECT 
+    restaurants.nom
+    COUNT(livreurs.id)
+FROM(
+    SELECT DISTINCT
+        restaurants.nom
+        livreurs.id
+    FROM restaurants
+    JOIN commandes ON restaurants.id = commandes.restaurants_id
+    JOIN livreurs ON commandes.livreurs_id = livreurs_id
+    ) 
+GROUP BY restaurants.nom
+```
+
+4. Vrai
+</pre>
+</div>
 <div created="20230914010625533" modified="20231003141557758" tags="[[Table des matières]]" title="Corrigés">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 
@@ -14556,7 +14650,7 @@ ORDER BY
     COUNT(first_name) DESC;
 </pre>
 </div>
-<div created="20231003141456048" modified="20231006162855848" tags="[[Table des matières]]" title="Exercices examen 1">
+<div created="20231003141456048" modified="20231012191834517" tags="[[Table des matières]]" title="Exercices examen 1">
 <pre>''1.'' Imaginez que vous travaillez sur une base de données pour une bibliothèque. Vous avez une table de données appelée &quot;livres_empruntes&quot; avec les attributs suivants :
 
 * ISBN 
@@ -14577,7 +14671,7 @@ Sachant que :
  
 [img[https://i.imgur.com/jMfjQ4d.png]]
 
-''2.1 ''Complétez la commande SQL ci-dessous avec une jointure de droite. (
+''2.1 ''Complétez la commande SQL ci-dessous avec une jointure de droite pour afficher toutes les commandes même celle sans utilisateur.
 
 ```sql
 SELECT
@@ -14593,13 +14687,13 @@ FROM ******
 
  
 
-''3. ''À partir de l’énoncé et du MPD du TP1
+''3. ''À partir du model du TP1
 
 [img[https://i.imgur.com/ruROqEA.png]]
 
-''3.1 ''Ajouter au MPD une entité &quot;fournisseurs&quot; avec les champs : nom et adresse. Elle doit avoir une relation de plusieurs à plusieurs optionnelle avec restaurants.
+''3.1 ''Ajouter au MCD une entité &quot;fournisseurs&quot; avec les champs : nom et adresse. Elle doit avoir une relation de plusieurs à plusieurs optionnelle avec restaurants.
 
-''3.2'' Donner le code SQL nécessaire pour créer la table fournisseurs et pour modifier la table restaurants.
+''3.2'' Donner le code SQL nécessaire pour créer ou modifier les tables nécessaires à l'ajout de la table fournisseurs.
 
 ''3.3'' Sachant que &quot;SELECT DISTINCT prenom, nom&quot; permet de retourner seulement les combinaison prénom et nom unique dans une table.
 
