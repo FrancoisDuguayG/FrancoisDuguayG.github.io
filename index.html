@@ -9625,7 +9625,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="Semainier [[Table des matières]] [[10.03.02 Les tableaux]] [[10.03.01 Introduction]] [[10.03.03 Les tableaux associatifs]] [[10.04 Exécution conditionnelle]] [[10.05 Les boucles]] [[10.06 DML]] [[10.06.01 Extraction de données]] [[10.06.02 Modification de données]] [[9.03 EXISTS]] [[9.04 NVL et COALESCE]] [[9.11 LISTAGG]] [[9.09 ROLLUP]] [[9.10 CUBE]] [[9.08 UNPIVOT]] [[9.07 PIVOT]] 10.Exercices" title="$:/StoryList">
+<div list="Semainier [[Table des matières]] 10.Exercices" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20230914010443636" title="$:/temp/advancedsearch">
@@ -10099,7 +10099,7 @@ END;
 ---
 </pre>
 </div>
-<div bag="default" created="20200219122050383" list="" modified="20231016180439015" revision="0" tags="[[10.03 Variables]]" title="10.03.02 Les tableaux" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200219122050383" list="" modified="20231026054124161" revision="0" tags="[[10.03 Variables]]" title="10.03.02 Les tableaux" type="text/vnd.tiddlywiki">
 <pre>PL/SQL supporte des variables de type tableau (//array//), mais [[il faut créer le type de tableau|https://www.tutorialspoint.com/plsql/plsql_arrays.htm]] désiré dans la zone de déclaration avant de pouvoir déclarer des variables.
 
 !! 1er type de tableau: VARRAY
@@ -10110,7 +10110,7 @@ Exemple:
 
 &lt;$codeblock language='sql' code=&quot;DECLARE 
    TYPE t_noms IS VARRAY(5) OF VARCHAR2(10); 
-   TYPE t_notes IS VARRAY(5) OF INTEGER; 
+   TYPE t_notes IS VARRAY(5) OF NUMBER; 
    v_noms t_noms; 
    v_notes t_notes; 
    v_nb INTEGER; 
@@ -10134,7 +10134,7 @@ Exemple:
 
 &lt;$codeblock language='sql' code=&quot;DECLARE 
    TYPE t_noms IS TABLE OF VARCHAR2(10); 
-   TYPE t_notes IS TABLE OF INTEGER; 
+   TYPE t_notes IS TABLE OF NUMBER; 
    v_noms t_noms; 
    v_notes t_notes; 
    v_nb INTEGER; 
@@ -10149,6 +10149,23 @@ BEGIN
    END LOOP; 
 END; 
 /&quot; /&gt;
+
+Pour ajouter des éléments on utilise .EXTEND et l'index .LAST:
+
+DECLARE    
+    TYPE t_customer_type IS TABLE 
+        OF VARCHAR2(20);
+    t_customers t_customer_type := t_customer_type();
+BEGIN
+    t_customers.EXTEND;
+    t_customers(t_customers.LAST) := 'ABC Corp';
+    
+    t_customers.EXTEND;
+    t_customers(t_customers.LAST) := 'XYZ Inc';
+    
+    dbms_output.put_line('Le nombre de client est ' || t_customers.COUNT);
+END;
+/
 
 Il est possible de savoir si un élément se trouve dans un tableau avec ''MEMBER OF'':
 
@@ -11042,31 +11059,29 @@ END;
 
 ---</pre>
 </div>
-<div bag="default" created="20200212151138062" list="" modified="20231024050428929" revision="0" tags="[[10 PL/SQL]]" title="10.Exercices" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200212151138062" list="" modified="20231026060057293" revision="0" tags="[[10 PL/SQL]]" title="10.Exercices" type="text/vnd.tiddlywiki">
 <pre>#
 ##Créez un bloc anonyme avec une variable &quot;nom&quot;, qui affiche le texte &quot;Bonjour {nom}!&quot;.
 
-##Créez un bloc anonyme qui affiche &quot;Vrai&quot; si un nombre est divisible par 10, sinon il affiche &quot;Faux&quot;.
-
 ##Créez un bloc anonyme qui affiche une suite de 20 à 50.
 
-##Créez un bloc anonyme avec au moins une variable tableau et une variable longueur, votre code soit renverser le contenu du tableau. 
+##Créez un bloc anonyme qui affiche le texte &quot;Vrai&quot; si un nombre est divisible par 10,  et sinon il affiche &quot;Faux&quot;.
 
-##Créez un bloc anonyme qui placer dans une variable et puis afficher le prix moyen des produits de la catégorie &quot;Video Card&quot; (le nom de la catégorie doit être une variable).
+##Créez un bloc anonyme avec une variable tableau nommé &quot;v_tableau_initial&quot; et une variable tableau nommé &quot;v_tableau_final&quot;, votre code doit prendre les éléments du tableau initial et les disposer dans l'ordre inverse dans le tableau final.
 
-## On peut utiliser un ''FOR .. LOOP'' avec un ''SELECT'' pour extraire des données de plusieurs lignes retournées par une requête (voir exemple de curseur implicite «''B''» (//Cursor FOR LOOP with a SELECT statement example//) au https://www.oracletutorial.com/plsql-tutorial/plsql-cursor-for-loop/). Dans cette optique, prendre la requête finale du TP1 la mettre dans un code PL/SQL qui stockera les valeurs retournées dans des variables et les affichera à la console DBMS.
+##Avec le schéma sample_oracle_database (exercice chapitre 5), créez un bloc anonyme qui place dans une variable le prix moyen des produits de la catégorie &quot;Video Card&quot; (le nom de la catégorie doit être une variable) puis afficher le prix moyen dans la console.
 
-##Avec l'instruction PIVOT, recréer le tableau suivant:&lt;div&gt;
+## On peut utiliser un ''FOR .. LOOP'' avec un ''SELECT'' pour extraire des données de plusieurs lignes retournées par une requête (voir exemple de curseur implicite «''B''» (//Cursor FOR LOOP with a SELECT statement example//) au https://www.oracletutorial.com/plsql-tutorial/plsql-cursor-for-loop/). Dans cette optique, prendre la requête Q.2 (inventaire par region) du TP2, placer la requête dans un bloc de code PL/SQL qui doit stocker les valeurs retournées dans des variables et les afficher à la console DBMS.
+
+##Avec le schéma sample_oracle_database (exercice chapitre 5) et l'instruction PIVOT, affichez le tableau suivant:&lt;div&gt;
 
 [img[https://i.imgur.com/gjVhIv8.png]]
 Le tableau présente le nombre de commandes fait par les employés par titres (job_title) selon le status de la commande.
+&lt;/div&gt; 
 
-Finalement, intégrez la requête dans un code PL/SQL et stockez les valeurs retournées dans des variables.
-&lt;/div&gt;
+##(Bonus) Créez un bloc anonyme qui affiche la suite de fibonatchi.
 
-##Créez un bloc anonyme qui affiche la suite de fibonatchi.
-
-##Créez un bloc anonyme qui joue à fizz buzz: &lt;div&gt; 
+##(Bonus) Créez un bloc anonyme qui joue à fizz buzz: &lt;div&gt; 
 
 ```
 Pour les nombres entre 1 et 20 :
