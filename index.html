@@ -9487,7 +9487,7 @@ Error message and password prompt
 <div created="20220921192115794" modified="20231016011341835" title="$:/state/toc/Table des matières-09 Fonctions SQL avancées--249536019">
 <pre>close</pre>
 </div>
-<div created="20221129150101854" modified="20231024034628393" title="$:/state/toc/Table des matières-09 Fonctions SQL avancées-1329480811">
+<div created="20221129150101854" modified="20231027165419475" title="$:/state/toc/Table des matières-09 Fonctions SQL avancées-1329480811">
 <pre>open</pre>
 </div>
 <div created="20221024233723812" modified="20231016011552705" title="$:/state/toc/Table des matières-10 PL/SQL--249536019">
@@ -9625,7 +9625,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="Semainier [[Table des matières]] 10.Exercices" title="$:/StoryList">
+<div list="Semainier [[Table des matières]] [[10.03.02 Les tableaux]] 10.Exercices [[10.01 Introduction et opérateurs de base]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20230914010443636" title="$:/temp/advancedsearch">
@@ -9644,7 +9644,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/Heros/OneDrive%20-%20C%C3%A9gep%20Limoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
+            &quot;text&quot;: &quot;file:///Users/heros/Library/CloudStorage/OneDrive-Ce%CC%81gepLimoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9664,7 +9664,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/Heros/OneDrive%20-%20C%C3%A9gep%20Limoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
+            &quot;text&quot;: &quot;/Users/heros/Library/CloudStorage/OneDrive-Ce%CC%81gepLimoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9676,11 +9676,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1440&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;900&quot;
         }
     }
 }</pre>
@@ -10009,7 +10009,7 @@ Un exemple de comment importer des données dans Oracle avec SQL Developer:
 
 &lt;/div&gt;</pre>
 </div>
-<div bag="default" created="20200212155345254" list="" modified="20231016180223305" revision="0" tags="[[10 PL/SQL]]" title="10.01 Introduction et opérateurs de base" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200212155345254" list="" modified="20231027165923889" revision="0" tags="[[10 PL/SQL]]" title="10.01 Introduction et opérateurs de base" type="text/vnd.tiddlywiki">
 <pre>Le PL/SQL est un langage de programmation procédural propriétaire Oracle conçu pour s'amalgamer avec le SQL sur les bases de données Oracle.
 
 Les programmes PL/SQL sont exécutés directement sur le SGDB Oracle. On peut mélanger dans un même script .sql des blocs de code SQL (INSERT, UPDATE, etc.) avec des blocs de code PL/SQL.
@@ -10019,6 +10019,10 @@ La promiscuité intrinsèque du PL/SQL avec la base de données en fait un choix
 ! Opérateurs de base
 
 [[Voyez la liste|https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/plsql-language-fundamentals.html#GUID-42674F8E-55C3-44D5-BA42-47B323CD74F5]]
+
+! Documentation
+
+[[ORACLE TUTORIAL|https://www.oracletutorial.com/plsql-tutorial/what-is-plsql/]]
 
 ---
 </pre>
@@ -10099,7 +10103,7 @@ END;
 ---
 </pre>
 </div>
-<div bag="default" created="20200219122050383" list="" modified="20231026054124161" revision="0" tags="[[10.03 Variables]]" title="10.03.02 Les tableaux" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200219122050383" list="" modified="20231027165543788" revision="0" tags="[[10.03 Variables]]" title="10.03.02 Les tableaux" type="text/vnd.tiddlywiki">
 <pre>PL/SQL supporte des variables de type tableau (//array//), mais [[il faut créer le type de tableau|https://www.tutorialspoint.com/plsql/plsql_arrays.htm]] désiré dans la zone de déclaration avant de pouvoir déclarer des variables.
 
 !! 1er type de tableau: VARRAY
@@ -10152,8 +10156,8 @@ END;
 
 Pour ajouter des éléments on utilise .EXTEND et l'index .LAST:
 
-DECLARE    
-    TYPE t_customer_type IS TABLE 
+&lt;$codeblock language='sql' code=&quot;DECLARE    
+    TYPE t_customer_type IS VARRAY(5) 
         OF VARCHAR2(20);
     t_customers t_customer_type := t_customer_type();
 BEGIN
@@ -10165,7 +10169,7 @@ BEGIN
     
     dbms_output.put_line('Le nombre de client est ' || t_customers.COUNT);
 END;
-/
+/&quot; /&gt;
 
 Il est possible de savoir si un élément se trouve dans un tableau avec ''MEMBER OF'':
 
@@ -11059,29 +11063,30 @@ END;
 
 ---</pre>
 </div>
-<div bag="default" created="20200212151138062" list="" modified="20231026060057293" revision="0" tags="[[10 PL/SQL]]" title="10.Exercices" type="text/vnd.tiddlywiki">
-<pre>#
-##Créez un bloc anonyme avec une variable &quot;nom&quot;, qui affiche le texte &quot;Bonjour {nom}!&quot;.
+<div bag="default" created="20200212151138062" list="" modified="20231027165707154" revision="0" tags="[[10 PL/SQL]]" title="10.Exercices" type="text/vnd.tiddlywiki">
+<pre>''Exercices 10.1 ''
 
-##Créez un bloc anonyme qui affiche une suite de 20 à 50.
+#Créez un bloc anonyme avec une variable &quot;nom&quot;, qui affiche le texte &quot;Bonjour {nom}!&quot;.
 
-##Créez un bloc anonyme qui affiche le texte &quot;Vrai&quot; si un nombre est divisible par 10,  et sinon il affiche &quot;Faux&quot;.
+# Créez un bloc anonyme qui affiche une suite de 20 à 50.
 
-##Créez un bloc anonyme avec une variable tableau nommé &quot;v_tableau_initial&quot; et une variable tableau nommé &quot;v_tableau_final&quot;, votre code doit prendre les éléments du tableau initial et les disposer dans l'ordre inverse dans le tableau final.
+# Créez un bloc anonyme qui affiche le texte &quot;Vrai&quot; si un nombre est divisible par 10,  et sinon il affiche &quot;Faux&quot;.
 
-##Avec le schéma sample_oracle_database (exercice chapitre 5), créez un bloc anonyme qui place dans une variable le prix moyen des produits de la catégorie &quot;Video Card&quot; (le nom de la catégorie doit être une variable) puis afficher le prix moyen dans la console.
+# Créez un bloc anonyme avec une variable tableau nommé &quot;v_tableau_initial&quot; et une variable tableau nommé &quot;v_tableau_final&quot;, votre code doit prendre les éléments du tableau initial et les disposer dans l'ordre inverse dans le tableau final.
 
-## On peut utiliser un ''FOR .. LOOP'' avec un ''SELECT'' pour extraire des données de plusieurs lignes retournées par une requête (voir exemple de curseur implicite «''B''» (//Cursor FOR LOOP with a SELECT statement example//) au https://www.oracletutorial.com/plsql-tutorial/plsql-cursor-for-loop/). Dans cette optique, prendre la requête Q.2 (inventaire par region) du TP2, placer la requête dans un bloc de code PL/SQL qui doit stocker les valeurs retournées dans des variables et les afficher à la console DBMS.
+# Avec le schéma sample_oracle_database (exercice chapitre 5), créez un bloc anonyme qui place dans une variable le prix moyen des produits de la catégorie &quot;Video Card&quot; (le nom de la catégorie doit être une variable) puis afficher le prix moyen dans la console.
 
-##Avec le schéma sample_oracle_database (exercice chapitre 5) et l'instruction PIVOT, affichez le tableau suivant:&lt;div&gt;
+# On peut utiliser un ''FOR .. LOOP'' avec un ''SELECT'' pour extraire des données de plusieurs lignes retournées par une requête (voir exemple de curseur implicite «''B''» (//Cursor FOR LOOP with a SELECT statement example//) au https://www.oracletutorial.com/plsql-tutorial/plsql-cursor-for-loop/). Dans cette optique, prendre la requête Q.2 (inventaire par region) du TP2, placer la requête dans un bloc de code PL/SQL qui doit stocker les valeurs retournées dans des variables et les afficher à la console DBMS.
+
+#Avec le schéma sample_oracle_database (exercice chapitre 5) et l'instruction PIVOT, affichez le tableau suivant:&lt;div&gt;
 
 [img[https://i.imgur.com/gjVhIv8.png]]
 Le tableau présente le nombre de commandes fait par les employés par titres (job_title) selon le status de la commande.
 &lt;/div&gt; 
 
-##(Bonus) Créez un bloc anonyme qui affiche la suite de fibonatchi.
+#(Bonus) Créez un bloc anonyme qui affiche la suite de fibonatchi.
 
-##(Bonus) Créez un bloc anonyme qui joue à fizz buzz: &lt;div&gt; 
+#(Bonus) Créez un bloc anonyme qui joue à fizz buzz: &lt;div&gt; 
 
 ```
 Pour les nombres entre 1 et 20 :
@@ -11093,6 +11098,8 @@ sinon : on écrit le nombre
 
 ```
 &lt;/div&gt;
+
+''Exercices 10.2''
 
 # Écrire un script SQL pour Oracle qui:
 ## crée une table //employe// comportant les colonnes suivantes:
