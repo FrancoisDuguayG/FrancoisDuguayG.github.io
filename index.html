@@ -9491,8 +9491,8 @@ Error message and password prompt
 <div created="20220921192115794" modified="20231016011341835" title="$:/state/toc/Table des matières-09 Fonctions SQL avancées--249536019">
 <pre>close</pre>
 </div>
-<div created="20221129150101854" modified="20231029010949575" title="$:/state/toc/Table des matières-09 Fonctions SQL avancées-1329480811">
-<pre>close</pre>
+<div created="20221129150101854" modified="20231031144914730" title="$:/state/toc/Table des matières-09 Fonctions SQL avancées-1329480811">
+<pre>open</pre>
 </div>
 <div created="20221024233723812" modified="20231016011552705" title="$:/state/toc/Table des matières-10 PL/SQL--249536019">
 <pre>close</pre>
@@ -9629,7 +9629,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="$:/Import Semainier [[Table des matières]] [[10 PL/SQL]] 5.Exercices [[Exercice 5.1]] [[8.01 Théorie]] [[10.07 Déclencheurs]] [[10.08 Procédures et fonctions]] [[10.05 Les boucles]] [[10.02 Bloc anonyme PL/SQL]] [[10.01 Introduction et opérateurs de base]]" title="$:/StoryList">
+<div list="Semainier [[Table des matières]] [[10.07 Déclencheurs]] [[10.08 Procédures et fonctions]] [[Exercice 10.1]] [[10.11 Gestion des exceptions]] 10.Exercices" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20230914010443636" title="$:/temp/advancedsearch">
@@ -10509,7 +10509,7 @@ END;
 /
 ```</pre>
 </div>
-<div bag="default" created="20210210231606368" list="" modified="20231031015529331" revision="0" tags="[[10 PL/SQL]]" title="10.07 Déclencheurs" type="text/vnd.tiddlywiki">
+<div bag="default" created="20210210231606368" list="" modified="20231101164809577" revision="0" tags="[[10 PL/SQL]]" title="10.07 Déclencheurs" type="text/vnd.tiddlywiki">
 <pre>Les [[déclencheurs (triggers)|https://docs.oracle.com/en/database/oracle/oracle-database/18/lnpls/plsql-triggers.html#GUID-217E8B13-29EF-45F3-8D0F-2384F9F1D231]] sont des blocs PL/SQL rattachés à un schéma et exécutés automatiquement lorsque certains événements DML surviennent, p.ex. lorsqu'on insère, supprime ou modifie des données.
 
 Les déclencheurs ont plusieurs utilités, dont notamment:
@@ -10536,7 +10536,7 @@ Imaginons la table //departement// suivante:
 ```sql
 CREATE TABLE departement
 (
-	id INTEGER PRIMARY KEY,
+	id NUMBER PRIMARY KEY,
 	no CHAR(4) NOT NULL UNIQUE,
 	nom VARCHAR2(32) NOT NULL
 );
@@ -10566,9 +10566,9 @@ Un autre exemple, où on désire garder une trace de toutes les anciennes valeur
 ```sql
 CREATE TABLE departement_sauvegarde
 (
-	id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-	id_old INTEGER,
-	id_new INTEGER,
+	id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	id_old NUMBER,
+	id_new NUMBER,
 	no_old CHAR(4),
 	no_new CHAR(4),
 	nom_old VARCHAR2(32),
@@ -10596,7 +10596,7 @@ Alors qu'il est de bonne pratique d'insérer des COMMIT dans un bloc PL/SQL anon
 
 ---</pre>
 </div>
-<div bag="default" created="20200217121126752" list="" modified="20231031021142225" revision="0" tags="[[10 PL/SQL]]" title="10.08 Procédures et fonctions" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200217121126752" list="" modified="20231101164921258" revision="0" tags="[[10 PL/SQL]]" title="10.08 Procédures et fonctions" type="text/vnd.tiddlywiki">
 <pre>Il est possible de stocker des procédures et des fonctions dans la base de données, qui pourront être appelées à volonté par la suite.
 
 &gt; ''RAPPEL''
@@ -10632,14 +10632,14 @@ CREATE OR REPLACE PROCEDURE stocker_personne (
     p_nom IN VARCHAR2,
     p_tel IN VARCHAR2,
     p_adresse IN VARCHAR2,
-    p_id OUT INTEGER
+    p_id OUT NUMBER(32,0)
 ) IS
 BEGIN
   INSERT INTO personne
     (nom, tel, adresse)
   VALUES
     (p_nom, p_tel, p_adresse)
-  RETURNING id INTO p_id;
+  RETURNING em_id INTO p_id;
 END;
 /
 ```
@@ -10651,14 +10651,14 @@ Chaque paramètre peut être en mode IN, OUT ou INOUT. Le mode paramètre spéci
 * ''INOUT'': Lecture et Écriture;
 Exemple d'appel de procédure:
 
-&lt;$codeblock language='sql' code=&quot;EXECUTE stocker_personne('François', '418 123-4567', '789 rue Abcd');
+&lt;$codeblock language='sql' code=&quot;EXECUTE stocker_personne('François', '418 123-4567', '789 rue Abcd', NULL);
 &quot; /&gt;
 
 ou
 
 
 &lt;$codeblock language='sql' code=&quot;DECLARE
-    v_id INTEGER;
+    v_id NUMBER(32,0);
 BEGIN
     stocker_personne('Eric', '418 123-4567', '789 rue Abcd', v_id);
     dbms_output.put_line('ID = ' || v_id);
@@ -10695,7 +10695,7 @@ CREATE OR REPLACE FUNCTION stocker_personne (
     p_nom IN VARCHAR2,
     p_tel IN VARCHAR2,
     p_adresse IN VARCHAR2
-) RETURN NUMBER IS
+) RETURN NUMBER(32,0) IS
 
   v_id NUMBER;
 
@@ -10704,7 +10704,7 @@ BEGIN
     (nom, tel, adresse)
   VALUES
     (p_nom, p_tel, p_adresse)
-  RETURNING id INTO v_id;
+  RETURNING em_id INTO v_id;
 
   RETURN v_id;
 END;
@@ -10719,9 +10719,9 @@ Exemple d'appel de fonction:
     stocker_personne('François', '418 123-4567', '789 rue Abcd');
 FROM
     dual;&quot; /&gt;
-
+ou
 &lt;$codeblock language='sql' code=&quot;DECLARE
-    v_id INTEGER;
+    v_id NUMBER(32,0);
 BEGIN
     v_id := stocker_personne('Eric', '418 123-4567', '789 rue Abcd');
     dbms_output.put_line('ID = ' || v_id);
@@ -11074,7 +11074,7 @@ END;
 
 ---</pre>
 </div>
-<div bag="default" created="20200212151138062" list="" modified="20231028221013356" revision="0" tags="[[10 PL/SQL]]" title="10.Exercices" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200212151138062" list="" modified="20231101165125976" revision="0" tags="[[10 PL/SQL]]" title="10.Exercices" type="text/vnd.tiddlywiki">
 <pre>''Exercices 10.1 ''
 
 #Créez un bloc anonyme avec une variable &quot;nom&quot;, qui affiche le texte &quot;Bonjour {nom}!&quot;.
@@ -11139,6 +11139,8 @@ sinon : on écrit le nombre
 ## contient un bloc PL/SQL anonyme créant un nouvel employé avec la procédure créée ci-dessus.
 
 # Oracle dispose d'un [[Data Dictionary|https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/data-dictionary-and-dynamic-performance-views.html]] contenant toutes les informations relatives aux schémas et autres objets d'une instance Oracle. Ces informations sont souvent regroupées sous forme de vues facilitant leur consultation. Par exemple, toutes les tables existantes sont listées dans la vue ''all_tables'', tous les index dans ''all_indexes'' et ainsi de suite. Sachant cela, écrire une boucle PL/SQL qui fait des &quot;DROP TABLE&quot; pour les tables créées à la question précédente, mais sans utiliser directement leur nom (explorez d'abord la vue ''all_tables'' pour comprendre sa structure).
+
+''Exercices 10.3''
 
 # Modifier l'exercice 2 ci-dessus de manière à ce que toutes les routines se retrouvent dans un même //package//.</pre>
 </div>
@@ -14511,7 +14513,7 @@ ORDER BY &quot;Quantite total&quot; DESC;
 <div bag="default" revision="0" title="E:\tmp\420-383-li-em\NotesDeCours\tiddlers\$__StoryList-winzen.tid.html" type="text/html">
 <pre></pre>
 </div>
-<div created="20231028221145403" modified="20231028222155419" tags="Corrigés" title="Exercice 10.1">
+<div created="20231028221145403" modified="20231101165056367" tags="Corrigés" title="Exercice 10.1">
 <pre>```sql
 --solution exercices 10.1 BD 
 
@@ -14540,9 +14542,7 @@ END;
 -- 3 
 BEGIN
     FOR i IN 20..50 LOOP
-        IF MOD(i, 2) = 0 THEN
-            dbms_output.put_line(i);
-        END IF;
+        dbms_output.put_line(i);
     END LOOP;
 END;
 / 
@@ -14552,8 +14552,7 @@ END;
 DECLARE
     TYPE t_nb IS
         VARRAY(10) OF NUMBER;
-    v_tableau_initial t_nb := t_nb(1, 2, 3, 4, 5,
-                                  6);
+    v_tableau_initial t_nb := t_nb(3, 4, 5, 6, 7, 10);
     v_tableau_final   t_nb := t_nb();
 BEGIN
     v_tableau_final.extend(v_tableau_initial.count);
@@ -14593,9 +14592,9 @@ END;
 BEGIN     
     FOR inventaire IN (
         SELECT 
-            SUM(inventories.quantity) &quot;quantite&quot;, 
-            countries.country_name &quot;pays&quot;, 
-            regions.region_name &quot;region&quot; 
+            SUM(inventories.quantity) AS &quot;quantite inventaire&quot;, 
+            countries.country_name AS &quot;pays&quot;, 
+            regions.region_name AS region 
         FROM 
             inventories 
             INNER JOIN warehouses ON warehouses.warehouse_id = inventories.warehouse_id 
@@ -14607,7 +14606,7 @@ BEGIN
             regions.region_name 
         ORDER BY 
         SUM(inventories.quantity) DESC ) LOOP 
-            dbms_output.put_line('quantité: ' || inventaire.quantite || ', pays: ' || inventaire. pays || ', region: ' || inventaire. region); 
+            dbms_output.put_line('quantité: ' || inventaire.&quot;quantite inventaire&quot; || ', pays: ' || inventaire.&quot;pays&quot; || ', region: ' || inventaire.region); 
     END LOOP;
 END;
 / 
