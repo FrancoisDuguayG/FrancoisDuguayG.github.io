@@ -9513,8 +9513,8 @@ Error message and password prompt
 <div created="20221114172027932" modified="20221114195540481" title="$:/state/toc/Table des matières-12 Administration des droits d'accès--249536019">
 <pre>close</pre>
 </div>
-<div created="20221114173952024" modified="20231114153331631" title="$:/state/toc/Table des matières-12 Administration des droits d'accès-1329480811">
-<pre>close</pre>
+<div created="20221114173952024" modified="20231114154213806" title="$:/state/toc/Table des matières-12 Administration des droits d'accès-1329480811">
+<pre>open</pre>
 </div>
 <div created="20221114191024103" modified="20221114195541762" title="$:/state/toc/Table des matières-13 Sécurité des bases de données--249536019">
 <pre>close</pre>
@@ -9633,7 +9633,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="Semainier [[Table des matières]]" title="$:/StoryList">
+<div list="Semainier [[Table des matières]] [[11.01 Théorie indexation]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20230914010443636" title="$:/temp/advancedsearch">
@@ -11155,7 +11155,7 @@ sinon : on écrit le nombre
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20221114185414753" modified="20231114153247970" tags="[[11 Indexation]]" title="11.01 Théorie indexation">
+<div created="20221114185414753" modified="20231114155248618" tags="[[11 Indexation]]" title="11.01 Théorie indexation">
 <pre>! Définition
 
 L'indexation d'une colonne (un [[index]]) consiste pour un SGBD à se créer une table de correspondance interne entre les valeurs de cette colonne et les enregistrements de la table où elle se trouve.
@@ -11184,11 +11184,11 @@ Les index seront automatiquement utilisés par le SGDB lorsque l'occasion s'y pr
 
 &gt; //Note:// Dans ~MySQL/~MariaDB, les clefs érangères sont automatiquement indexées par défaut, mais si on les indexe explicitement, le SGDB va simplement faire fi des index par défaut et utiliser les index explicites, et comme dans Oracle les clefs étrangères ''ne sont pas'' indexées par défaut, ''il est de bonne pratique de TOUJOURS indexer les clefs étrangères, peu importe le SGDB avec lequel on travaille'' afin d'éviter les mauvaises surprises (par exemple lors d'une migration de base de données).
 
-! Création d'index dans Oracle
+! Création d'index B-Tree
 
 ```sql
 CREATE [UNIQUE] INDEX nom_index
-  ON nom_table (colonne1, colonne2, ...colonneN);
+  ON nom_table (colonne1[,colonne2,...]);
 ```
 
 Toutes les clefs uniques sont automatiquement indexées; pour les autres colonnes, dans Oracle, on ne peut créer un index sur une colonne directement dans un CREATE TABLE ou un ALTER TABLE: il faut absolument passer par un  [[CREATE INDEX|https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/CREATE-INDEX.html]]:
@@ -11211,6 +11211,13 @@ CREATE INDEX idx_pers_adr ON personne (adresse);
 CREATE INDEX idx_pers_tel_adr ON personne (telephone, adresse);
 ```
 &gt; ''IMPORTANT'': dans une clef unique composée, c'est la combinaison des colonnes format la clef unique qui sera indexée automatiquement, et non chaque colonne individuellement, d'où l'importance d'indexer chaque colonne individuellement non unique qui pourrait servir dans des clauses WHERE ou des jointures.
+
+! Création d'index Bit Map
+
+```sql
+CREATE BITMAP INDEX nom_index
+ON nom_table(colonne1[,colonne2,...]);
+```
 
 ---</pre>
 </div>
