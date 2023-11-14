@@ -629,6 +629,8 @@ Error message and password prompt
 
 <li>Draft of '5.Exercices'</li>
 
+<li>Draft of 'New Tiddler 1'</li>
+
 <li>Draft of 'New Tiddler'</li>
 
 <li>Draft of 'TP1'</li>
@@ -9633,7 +9635,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="Semainier [[Table des matières]] [[11.01 Théorie indexation]]" title="$:/StoryList">
+<div list="[[Draft of 'New Tiddler 1']] [[9.07 PIVOT]] [[09 Fonctions SQL avancées]] [[9.02 HAVING]] [[10.10 Les paquetages (PACKAGE)]] [[10.08 Procédures et fonctions]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20230914010443636" title="$:/temp/advancedsearch">
@@ -10600,7 +10602,7 @@ Alors qu'il est de bonne pratique d'insérer des COMMIT dans un bloc PL/SQL anon
 
 ---</pre>
 </div>
-<div bag="default" created="20200217121126752" list="" modified="20231101164921258" revision="0" tags="[[10 PL/SQL]]" title="10.08 Procédures et fonctions" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200217121126752" list="" modified="20231114182345259" revision="0" tags="[[10 PL/SQL]]" title="10.08 Procédures et fonctions" type="text/vnd.tiddlywiki">
 <pre>Il est possible de stocker des procédures et des fonctions dans la base de données, qui pourront être appelées à volonté par la suite.
 
 &gt; ''RAPPEL''
@@ -10636,7 +10638,7 @@ CREATE OR REPLACE PROCEDURE stocker_personne (
     p_nom IN VARCHAR2,
     p_tel IN VARCHAR2,
     p_adresse IN VARCHAR2,
-    p_id OUT NUMBER(32,0)
+    p_id OUT NUMBER
 ) IS
 BEGIN
   INSERT INTO personne
@@ -10699,7 +10701,7 @@ CREATE OR REPLACE FUNCTION stocker_personne (
     p_nom IN VARCHAR2,
     p_tel IN VARCHAR2,
     p_adresse IN VARCHAR2
-) RETURN NUMBER(32,0) IS
+) RETURN NUMBER IS
 
   v_id NUMBER;
 
@@ -13392,7 +13394,7 @@ VALUES
 
 ---</pre>
 </div>
-<div bag="default" created="20200405163759439" list="" modified="20231024043454861" revision="0" tags="[[09 Fonctions SQL avancées]]" title="9.07 PIVOT" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200405163759439" list="" modified="20231114172634831" revision="0" tags="[[09 Fonctions SQL avancées]]" title="9.07 PIVOT" type="text/vnd.tiddlywiki">
 <pre>(Voir aussi https://www.oracletutorial.com/oracle-basics/oracle-pivot/)
 
 ''PIVOT'', comme son nom l'indique, permet de &quot;pivoter&quot; des données de lignes vers des colonnes. Ça se rapproche de la notion de tableau croisé dans Excel (d'ailleurs appelé &quot;pivot table&quot; en anglais).
@@ -13466,6 +13468,33 @@ L'ordre de résolution est le suivant: WITH, FROM, PIVOT et SELECT.
 Le SELECT ne peut que choisir des données de la table pivotée.
 
 Si désiré, on peut «nommer» la fonction d'aggrégation (ici, SUM) dans le PIVOT: ce nom sera alors automatiquement suffixé à chaque nom de colonne (donc, ci-dessous, «chaises» devient «chaises_quantite», etc.):
+
+```sql
+WITH
+    donnees AS (
+        SELECT
+            produit,
+            client,
+            qte
+        FROM
+            vente
+    )
+SELECT
+    *
+FROM
+    donnees
+PIVOT (
+    SUM (qte) quantite
+    FOR produit IN (
+        'chaise' chaises,
+        'bureau' bureaux,
+        'tapis' tapis,
+        'table' tables
+    )
+);
+```
+
+Pour remplacer les NULL par des zéros:
 
 ```sql
 WITH
@@ -14275,6 +14304,30 @@ WHERE
 ```
 [img[https://i.imgur.com/XRfXBKh.png]]
 &lt;/div&gt;</pre>
+</div>
+<div created="20231114172859915" draft.of="New Tiddler 1" draft.title="9.16 INSERT … SELECT" modified="20231114180428750" tags="" title="Draft of 'New Tiddler 1'">
+<pre>Cette instruction permet d'ajouter des données dans une table provenant d'une autre table.
+
+INSERT .. SELECT remplace le VALUES d'une insertion par une instruction SELECT.
+
+```sql
+INSERT INTO target_table (col1, col2, col3)
+SELECT col1,
+       col2,
+       col3
+FROM source_table
+WHERE condition;
+```
+
+```sql
+INSERT INTO  sales(customer_id, product_id, order_date, total)
+SELECT customer_id,
+       product_id,
+       order_date,
+       SUM(quantity * unit_price) amount
+FROM orders
+INNER JOIN order_items USING(order_id)
+```</pre>
 </div>
 <div created="20231028215845302" draft.of="New Tiddler" draft.title="New Tiddler" modified="20231028215845302" tags="" title="Draft of 'New Tiddler'">
 <pre></pre>
