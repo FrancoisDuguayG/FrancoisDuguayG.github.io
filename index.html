@@ -605,6 +605,8 @@ Error message and password prompt
 
 <li>9.16 INSERT … SELECT</li>
 
+<li>9.16 UNION</li>
+
 <li>98 Rappels</li>
 
 <li>98.01 Comment bâtir une requête</li>
@@ -630,6 +632,8 @@ Error message and password prompt
 <li>Draft of '4.Exercices'</li>
 
 <li>Draft of '5.Exercices'</li>
+
+<li>Draft of '9.14 CAST'</li>
 
 <li>Draft of 'New Tiddler'</li>
 
@@ -9593,8 +9597,8 @@ Error message and password prompt
 <div created="20211121132059832" modified="20211121132101817" title="$:/state/toc/Table des matières/07 PL/SQL-7.07 DML--249536019">
 <pre>close</pre>
 </div>
-<div created="20221025001424573" modified="20231116160828085" title="$:/state/toc/Table des matières/10 PL/SQL-10.03 Variables-1329480811">
-<pre>open</pre>
+<div created="20221025001424573" modified="20231128044305929" title="$:/state/toc/Table des matières/10 PL/SQL-10.03 Variables-1329480811">
+<pre>close</pre>
 </div>
 <div created="20221101130817763" modified="20221101131729959" title="$:/state/toc/Table des matières/10 PL/SQL-10.06 DML--249536019">
 <pre>close</pre>
@@ -9635,7 +9639,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="Semainier [[Table des matières]] [[10.07 Déclencheurs]] [[9.07 PIVOT]]" title="$:/StoryList">
+<div list="[[9.16 UNION]] Semainier [[Table des matières]] [[12.02 Rôles]] [[11.01 Théorie indexation]] [[12.01 Privilèges]] [[12 Administration des droits d'accès]] [[9.13 CONNECT BY]] [[9.11 LISTAGG]] [[9.05 CASE]] [[9.08 UNPIVOT]] [[9.07 PIVOT]] [[9.06 MERGE]] [[2.01 Langage SQL]] [[8.01 Théorie]] 8.Exercices [[Exercice 8.]] TP2 [[Draft of '9.14 CAST']]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20230914010443636" title="$:/temp/advancedsearch">
@@ -9654,7 +9658,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///Users/heros/Library/CloudStorage/OneDrive-Ce%CC%81gepLimoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/Heros/OneDrive%20-%20C%C3%A9gep%20Limoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9674,7 +9678,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/Users/heros/Library/CloudStorage/OneDrive-Ce%CC%81gepLimoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/Heros/OneDrive%20-%20C%C3%A9gep%20Limoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9686,16 +9690,16 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1440&quot;
+            &quot;text&quot;: &quot;1920&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;900&quot;
+            &quot;text&quot;: &quot;1080&quot;
         }
     }
 }</pre>
 </div>
-<div created="20210413114920844" modified="20230915131401321" title="$:/temp/search">
+<div created="20210413114920844" modified="20231128071658209" title="$:/temp/search">
 <pre></pre>
 </div>
 <div author="JeremyRuston" bag="default" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" revision="0" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.17">
@@ -11158,7 +11162,7 @@ sinon : on écrit le nombre
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20221114185414753" modified="20231114155248618" tags="[[11 Indexation]]" title="11.01 Théorie indexation">
+<div created="20221114185414753" modified="20231128051717109" tags="[[11 Indexation]]" title="11.01 Théorie indexation">
 <pre>! Définition
 
 L'indexation d'une colonne (un [[index]]) consiste pour un SGBD à se créer une table de correspondance interne entre les valeurs de cette colonne et les enregistrements de la table où elle se trouve.
@@ -11217,12 +11221,13 @@ CREATE INDEX idx_pers_tel_adr ON personne (telephone, adresse);
 
 ! Création d'index Bit Map
 
+Un index bitmap est un type spécial d'index. Ils fonctionnent bien pour les colonnes à faible cardinalité, qui ont un nombre modeste de valeurs distinctes, soit de manière absolue, soit par rapport au nombre d'enregistrements contenant les données.
+
 ```sql
 CREATE BITMAP INDEX nom_index
 ON nom_table(colonne1[,colonne2,...]);
 ```
-
----</pre>
+</pre>
 </div>
 <div created="20221114185442953" modified="20231114153311733" tags="[[11 Indexation]]" title="11.Exercices">
 <pre># Ajoutez dans Oracle les index indiqués dans les tables client et restaurant du MPD suivant  [[ce fichier Visio|https://lecegeplimoilou.sharepoint.com/:u:/s/Section_89465/Eb_F700KXgtPvn_3pgKnaBoBvSEFHt1BWDzfNAfCqeEonA?e=Rcn9Fv]] index séparés. (Vous pouvez utiliser votre TP1)
@@ -11292,10 +11297,10 @@ P.ex., `REVOKE CREATE SESSION FROM nom_schema;` retire à l'usager/schéma ''nom
 ---
 </pre>
 </div>
-<div created="20211128173616388" list="" modified="20231023065832836" tags="[[12 Administration des droits d'accès]]" title="12.02 Rôles">
+<div created="20211128173616388" list="" modified="20231128051500315" tags="[[12 Administration des droits d'accès]]" title="12.02 Rôles">
 <pre>Un ''rôle'' est un ensemble de [[privilèges|12.01 Privilèges]] que l'on peut accorder à un schéma/usager (cela peut être assimilé au concept de //groupe// que l'on retrouve sur certains systèmes d'exploitation dans la gestion des droits d'accès).
 
-Avec Oracle, on a le choix d'utiliser des [[rôles prédéfinis|https://docs.oracle.com/en/database/oracle/oracle-database/18/dbseg/configuring-privilege-and-role-authorization.html#GUID-A5B26A03-32CF-4F5D-A6BE-F2452AD8CB8A]] et/ou de s'en créer de nouveaux, mais de plus en plus Oracle pousse les usagers à ne pas se fier aux rôles prédéfinis et à plutôt créer leurs propres rôles.
+Avec Oracle, on a le choix d'utiliser des [[rôles prédéfinis|https://docs.oracle.com/en/database/oracle/oracle-database/18/dbseg/configuring-privilege-and-role-authorization.html#GUID-A5B26A03-32CF-4F5D-A6BE-F2452AD8CB8A]] (connect, ressource et dba) et/ou de s'en créer de nouveaux, mais de plus en plus Oracle pousse les usagers à ne pas se fier aux rôles prédéfinis et à plutôt créer leurs propres rôles.
 
 L'utilisation d'un rôle implique trois étapes:
 
@@ -13794,6 +13799,29 @@ GROUP BY customer_id,
          order_date;
 ```</pre>
 </div>
+<div created="20231128073022583" modified="20231128073354615" tags="[[09 Fonctions SQL avancées]]" title="9.16 UNION">
+<pre>L'opérateur UNION est un opérateur d'ensemble qui combine les ensembles de résultats de deux ou plusieurs instructions SELECT en un seul ensemble de résultats.
+
+Exemple:
+
+```sql
+SELECT
+    first_name,
+    last_name,
+    email,
+    'contact'
+FROM
+    contacts
+UNION SELECT
+    first_name,
+    last_name,
+    email,
+    'employee'
+FROM
+    employees;
+
+```</pre>
+</div>
 <div created="20221005124214515" modified="20230922024242057" tags="[[Table des matières]]" title="98 Rappels">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 
@@ -14305,6 +14333,21 @@ WHERE
 ```
 [img[https://i.imgur.com/XRfXBKh.png]]
 &lt;/div&gt;</pre>
+</div>
+<div bag="default" created="20200225182627935" draft.of="9.14 CAST" draft.title="9.14 CAST" list="" modified="20231128073238443" revision="0" tags="[[09 Fonctions SQL avancées]]" title="Draft of '9.14 CAST'" type="text/vnd.tiddlywiki">
+<pre>CAST permet de convertir des données en d'autres formats.
+
+&gt; &gt;&gt;&gt; ''[[Documentation oracle|https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/CAST.html]]''
+
+Exemple:
+
+```sql
+-- Récupère le n° d'employé en tant que chaîne de caractères plutôt qu'un nombre
+SELECT
+   CAST(employe.numero AS VARCHAR2(10)) AS no_employe
+FROM
+   employe;
+```</pre>
 </div>
 <div created="20231028215845302" draft.of="New Tiddler" draft.title="New Tiddler" modified="20231028215845302" tags="" title="Draft of 'New Tiddler'">
 <pre></pre>
