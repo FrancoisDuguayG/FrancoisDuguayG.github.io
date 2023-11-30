@@ -9639,7 +9639,7 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="[[9.16 UNION]] Semainier [[Table des matières]] [[12.02 Rôles]] [[11.01 Théorie indexation]] [[12.01 Privilèges]] [[12 Administration des droits d'accès]] [[9.13 CONNECT BY]] [[9.11 LISTAGG]] [[9.05 CASE]] [[9.08 UNPIVOT]] [[9.07 PIVOT]] [[9.06 MERGE]] [[2.01 Langage SQL]] [[8.01 Théorie]] 8.Exercices [[Exercice 8.]] TP2 [[Draft of '9.14 CAST']]" title="$:/StoryList">
+<div list="Semainier [[Table des matières]] [[12.02 Rôles]] [[12.01 Privilèges]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210506132122141" modified="20230914010443636" title="$:/temp/advancedsearch">
@@ -9690,11 +9690,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;2867&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;1200&quot;
         }
     }
 }</pre>
@@ -11241,7 +11241,7 @@ ON nom_table(colonne1[,colonne2,...]);
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20211128173558904" list="" modified="20231023065824601" tags="[[12 Administration des droits d'accès]]" title="12.01 Privilèges">
+<div created="20211128173558904" list="" modified="20231130160236355" tags="[[12 Administration des droits d'accès]]" title="12.01 Privilèges">
 <pre>Jusqu'à présent, en créant un nouvel utilisateur (schéma), on a toujours fait un `GRANT ALL PRIVILEGES TO nom_schema;` pour nous permettre ensuite de nous connecter au schéma et d'y travailler.
 
 Bien que cette méthode soit pratique et facilitante, elles n'est évidemment ''pas du tout recommandée'' dans un contexte de sécurité: en pratique, ''chaque schéma/usager ne devrait recevoir que les privilèges dont il a besoin'' pour effectuer les tâches nécessaires; par exemple, ''un schéma ne devrait pas avoir le droit d'accéder au contenu d'un autre schéma'' et encore moins d'en modifier le contenu, sauf évidemment si c'est un besoin.
@@ -11269,6 +11269,8 @@ On accorde des privilèges avec la commande [[GRANT|https://docs.oracle.com/en/d
 *&gt; ''NOTE:'' Il sera impossible à un usager d'insérer des données dans son schéma s'il n'a pas un quota de défini; le privilège ''UNLIMITED TABLESPACE'' lui donne un quota illimité, mais si on voulait lui donner un quota précis (p.ex., 100 Mo) on pourrait plutôt faire: `ALTER USER nom_schema QUOTA 100M ON USERS;` (à remarquer qu'on pourrait aussi indiquer le quota dans la commande ''CREATE USER'' initiale).
 
 * `GRANT CREATE VIEW TO nom_schema;` donne le droit à l'usager/schéma ''nom_schema'' de créer, utiliser, modifier et détruire des vues dans son propre schéma.
+
+* `GRANT CREATE ANY INDEX TO nom_schema;` donne le droit à l'usager/schéma ''nom_schema'' de créer et détruire tous les types d'index dans son propre schéma.
 
 On voit ci-dessus qu'un ''GRANT CREATE'' donnera aussi les droits d'utilisation, de modification et de suppression //dans le schéma de l'utilisateur//; si on veut donner des droits d'utilisation dans un autre schéma, il faudra donner les droits appropriés; p.ex.:
 
