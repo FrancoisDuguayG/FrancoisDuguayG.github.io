@@ -44,7 +44,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>420-383-LI Bases de données II (A2023) — Cégep Limoilou Enseignant: François Duguay-GiguèreNote de cours: Eric Martel</title>
+<title>420-383-LI Bases de données II (A2024) — Cégep Limoilou Enseignant: François Duguay-GiguèreNote de cours: Eric Martel</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~--><!--~~ Raw markup ~~-->
 
 
@@ -150,6 +150,8 @@ Error message and password prompt
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki</li>
 
 <li>$:/config/RelinkOnRename</li>
+
+<li>$:/ControlPanel</li>
 
 <li>$:/core</li>
 
@@ -377,7 +379,7 @@ Error message and password prompt
 
 <li>00 Documents utiles</li>
 
-<li>01 Oracle XE</li>
+<li>01 Oracle Database</li>
 
 <li>02 Quelques particularités d'Oracle vs MySQL/MariaDB</li>
 
@@ -635,9 +637,9 @@ Error message and password prompt
 
 <li>Draft of '9.14 CAST'</li>
 
-<li>Draft of 'New Tiddler'</li>
+<li>Draft of 'New Tiddler 1'</li>
 
-<li>Draft of 'TP1'</li>
+<li>Draft of 'New Tiddler'</li>
 
 <li>E:\tmp\420-383-li-em\NotesDeCours\tiddlers\$__StoryList-winzen.tid</li>
 
@@ -677,16 +679,6 @@ Error message and password prompt
 
 <li>Table des matières</li>
 
-<li>TP 1</li>
-
-<li>TP 2</li>
-
-<li>TP1</li>
-
-<li>TP2</li>
-
-<li>TP4</li>
-
 </ul>
 </p>
 
@@ -709,7 +701,7 @@ Error message and password prompt
 <div created="20230914010515791" modified="20230914010515791" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all">
 <pre>show</pre>
 </div>
-<div created="20230914010522427" modified="20230914010522427" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
+<div created="20230914010522427" modified="20240820043139464" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
 <pre>hide</pre>
 </div>
 <div created="20230914010508651" modified="20230914010513491" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
@@ -723,6 +715,12 @@ Error message and password prompt
 </div>
 <div bag="default" created="20200122032829748" modified="20200122032830797" revision="0" title="$:/config/RelinkOnRename" type="text/vnd.tiddlywiki">
 <pre>yes</pre>
+</div>
+<div color="#bbb" created="20240820043132732" icon="$:/core/images/options-button" modified="20240820043132732" title="$:/ControlPanel">
+<pre>&lt;div class=&quot;tc-control-panel&quot;&gt;
+&lt;&lt;tabs &quot;[all[shadows+tiddlers]tag[$:/tags/ControlPanel]!has[draft.of]]&quot; &quot;$:/core/ui/ControlPanel/Info&quot;&gt;&gt;
+&lt;/div&gt;
+</pre>
 </div>
 <div author="JeremyRuston" bag="default" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" revision="0" title="$:/core" type="application/json" version="5.1.17">
 <pre>{
@@ -9344,8 +9342,8 @@ Error message and password prompt
 <div bag="default" created="20181113130555919" modified="20230819214305450" revision="0" title="$:/SiteSubtitle" type="text/vnd.tiddlywiki">
 <pre>Cégep Limoilou &lt;br&gt;Enseignant: François Duguay-Giguère&lt;br&gt;Note de cours: Eric Martel</pre>
 </div>
-<div bag="default" created="20181113130525973" modified="20230819214339531" revision="0" title="$:/SiteTitle" type="text/vnd.tiddlywiki">
-<pre>420-383-LI Bases de données II (A2023)</pre>
+<div bag="default" created="20181113130525973" modified="20240820043118837" revision="0" title="$:/SiteTitle" type="text/vnd.tiddlywiki">
+<pre>420-383-LI Bases de données II (A2024)</pre>
 </div>
 <div created="20230819174940314" modified="20230819174944360" title="$:/state/Link/-591013914/search">
 <pre></pre>
@@ -9356,7 +9354,7 @@ Error message and password prompt
 <div created="20210406102542046" modified="20230819180127531" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20210406102541021" modified="20231031021846430" title="$:/state/sidebar">
+<div created="20210406102541021" modified="20240820043054225" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20230914010446143" modified="20230914010448348" title="$:/state/tab--1498284803">
@@ -9371,11 +9369,11 @@ Error message and password prompt
 <div created="20221114173822792" modified="20230914010218962" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20210429113554762" modified="20230914025904482" title="$:/state/tab/moresidebar-401116514">
-<pre>$:/core/ui/MoreSideBar/System</pre>
+<div created="20210429113554762" modified="20240820042905508" title="$:/state/tab/moresidebar-401116514">
+<pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20210428234422477" modified="20230914025910597" title="$:/state/tab/sidebar--1835078512">
-<pre>Table des matières</pre>
+<div created="20210428234422477" modified="20240820043110815" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div created="20230819153524424" modified="20230819153524424" title="$:/state/toc/01 Oracle XE-1.Exercices--29343253">
 <pre>open</pre>
@@ -9395,14 +9393,14 @@ Error message and password prompt
 <div created="20210821233715209" modified="20220926151609497" title="$:/state/toc/Table des matières-01 Oracle XE--249536019">
 <pre>close</pre>
 </div>
-<div created="20210927095121831" modified="20231201194532593" title="$:/state/toc/Table des matières-01 Oracle XE-1329480811">
-<pre>close</pre>
+<div created="20210927095121831" modified="20240820042001088" title="$:/state/toc/Table des matières-01 Oracle XE-1329480811">
+<pre>open</pre>
 </div>
 <div created="20210822155502410" modified="20220830163041483" title="$:/state/toc/Table des matières-02 Quelques particularités d'Oracle vs MySQL/MariaDB--249536019">
 <pre>close</pre>
 </div>
-<div created="20221005123423822" modified="20231114145822567" title="$:/state/toc/Table des matières-02 Quelques particularités d'Oracle vs MySQL/MariaDB-1329480811">
-<pre>close</pre>
+<div created="20221005123423822" modified="20240820042007329" title="$:/state/toc/Table des matières-02 Quelques particularités d'Oracle vs MySQL/MariaDB-1329480811">
+<pre>open</pre>
 </div>
 <div created="20210830130207760" modified="20220829181009530" title="$:/state/toc/Table des matières-02 Rappels (à réviser au besoin)--249536019">
 <pre>close</pre>
@@ -9413,8 +9411,8 @@ Error message and password prompt
 <div created="20220829185426582" modified="20220913142446356" title="$:/state/toc/Table des matières-03 Modélisation conceptuelle--249536019">
 <pre>close</pre>
 </div>
-<div created="20221005124048094" modified="20231114145824040" title="$:/state/toc/Table des matières-03 Modélisation conceptuelle-1329480811">
-<pre>close</pre>
+<div created="20221005124048094" modified="20240820042011740" title="$:/state/toc/Table des matières-03 Modélisation conceptuelle-1329480811">
+<pre>open</pre>
 </div>
 <div created="20210830130235420" modified="20220829180902179" title="$:/state/toc/Table des matières-03 Quelques particularités d'Oracle vs MySQL/MariaDB--249536019">
 <pre>close</pre>
@@ -9497,32 +9495,32 @@ Error message and password prompt
 <div created="20220919155229607" modified="20221005112820471" title="$:/state/toc/Table des matières-08 Vues--249536019">
 <pre>close</pre>
 </div>
-<div created="20220926150104124" modified="20231116160541702" title="$:/state/toc/Table des matières-08 Vues-1329480811">
-<pre>close</pre>
+<div created="20220926150104124" modified="20240820042119466" title="$:/state/toc/Table des matières-08 Vues-1329480811">
+<pre>open</pre>
 </div>
 <div created="20220921192115794" modified="20231016011341835" title="$:/state/toc/Table des matières-09 Fonctions SQL avancées--249536019">
 <pre>close</pre>
 </div>
-<div created="20221129150101854" modified="20231201194534192" title="$:/state/toc/Table des matières-09 Fonctions SQL avancées-1329480811">
+<div created="20221129150101854" modified="20240820041932383" title="$:/state/toc/Table des matières-09 Fonctions SQL avancées-1329480811">
 <pre>close</pre>
 </div>
 <div created="20221024233723812" modified="20231203203511034" title="$:/state/toc/Table des matières-10 PL/SQL--249536019">
 <pre>close</pre>
 </div>
-<div created="20221024235955767" modified="20231201194536020" title="$:/state/toc/Table des matières-10 PL/SQL-1329480811">
-<pre>close</pre>
+<div created="20221024235955767" modified="20240820042310235" title="$:/state/toc/Table des matières-10 PL/SQL-1329480811">
+<pre>open</pre>
 </div>
 <div created="20221114172128173" modified="20231203203606342" title="$:/state/toc/Table des matières-11 Indexation--249536019">
 <pre>open</pre>
 </div>
-<div created="20221114173800318" modified="20231201194537926" title="$:/state/toc/Table des matières-11 Indexation-1329480811">
-<pre>open</pre>
+<div created="20221114173800318" modified="20231204071734125" title="$:/state/toc/Table des matières-11 Indexation-1329480811">
+<pre>close</pre>
 </div>
 <div created="20221114172027932" modified="20221114195540481" title="$:/state/toc/Table des matières-12 Administration des droits d'accès--249536019">
 <pre>close</pre>
 </div>
-<div created="20221114173952024" modified="20231114154213806" title="$:/state/toc/Table des matières-12 Administration des droits d'accès-1329480811">
-<pre>open</pre>
+<div created="20221114173952024" modified="20240820041933160" title="$:/state/toc/Table des matières-12 Administration des droits d'accès-1329480811">
+<pre>close</pre>
 </div>
 <div created="20221114191024103" modified="20221114195541762" title="$:/state/toc/Table des matières-13 Sécurité des bases de données--249536019">
 <pre>close</pre>
@@ -9530,13 +9528,13 @@ Error message and password prompt
 <div created="20221114185631265" modified="20231114153330888" title="$:/state/toc/Table des matières-13 Sécurité des bases de données-1329480811">
 <pre>close</pre>
 </div>
-<div created="20221114185726261" modified="20231114153332714" title="$:/state/toc/Table des matières-14 Copie et transfert de données-1329480811">
-<pre>open</pre>
+<div created="20221114185726261" modified="20240820042413379" title="$:/state/toc/Table des matières-14 Copie et transfert de données-1329480811">
+<pre>close</pre>
 </div>
 <div created="20221005124511968" modified="20231016011304554" title="$:/state/toc/Table des matières-98 Rappels--249536019">
 <pre>close</pre>
 </div>
-<div created="20221130143307117" modified="20231003140553413" title="$:/state/toc/Table des matières-98 Rappels-1329480811">
+<div created="20221130143307117" modified="20240820041924037" title="$:/state/toc/Table des matières-98 Rappels-1329480811">
 <pre>close</pre>
 </div>
 <div created="20230914011859166" modified="20230914011902201" title="$:/state/toc/Table des matières-99 Corrigés-1329480811">
@@ -9563,13 +9561,13 @@ Error message and password prompt
 <div created="20231012201308982" modified="20231106220754324" title="$:/state/toc/Table des matières-Corrigés--249536019">
 <pre>close</pre>
 </div>
-<div created="20230914012006429" modified="20231203205633820" title="$:/state/toc/Table des matières-Corrigés-1329480811">
-<pre>open</pre>
+<div created="20230914012006429" modified="20240820041925268" title="$:/state/toc/Table des matières-Corrigés-1329480811">
+<pre>close</pre>
 </div>
 <div created="20220922180706338" modified="20220922180715601" title="$:/state/toc/Table des matières-Glossaire--249536019">
 <pre>close</pre>
 </div>
-<div created="20230819214148653" modified="20230914012001764" title="$:/state/toc/Table des matières-Glossaire-1329480811">
+<div created="20230819214148653" modified="20240820041929371" title="$:/state/toc/Table des matières-Glossaire-1329480811">
 <pre>close</pre>
 </div>
 <div created="20210821233924083" modified="20230907142301609" title="$:/state/toc/Table des matières-ZZ Anciens cours--249536019">
@@ -9599,7 +9597,7 @@ Error message and password prompt
 <div created="20211121132059832" modified="20211121132101817" title="$:/state/toc/Table des matières/07 PL/SQL-7.07 DML--249536019">
 <pre>close</pre>
 </div>
-<div created="20221025001424573" modified="20231128044305929" title="$:/state/toc/Table des matières/10 PL/SQL-10.03 Variables-1329480811">
+<div created="20221025001424573" modified="20240820042312216" title="$:/state/toc/Table des matières/10 PL/SQL-10.03 Variables-1329480811">
 <pre>close</pre>
 </div>
 <div created="20221101130817763" modified="20221101131729959" title="$:/state/toc/Table des matières/10 PL/SQL-10.06 DML--249536019">
@@ -9641,11 +9639,11 @@ Error message and password prompt
 <div created="20211017150538674" modified="20211017150538674" title="$:/state/toc/Table des matières/ZZ Anciens cours/07 PL/SQL-7.03 Variables-1329480811">
 <pre>open</pre>
 </div>
-<div list="TP4 Semainier [[Table des matières]] [[11.01 Théorie indexation]] [[14.01 Théorie transfert]] TP2" title="$:/StoryList">
+<div list="Semainier [[Table des matières]] [[00 Documents utiles]] [[ORM Python avec SQLAlchemy]] [[8.01 Notion d'ORM]] index Glossaire [[Exercices examen 1]] E:\tmp\420-383-li-em\NotesDeCours\tiddlers\$__StoryList-winzen.tid.html E:\tmp\420-383-li-em\NotesDeCours\tiddlers\$__StoryList-winzen.tid css Corrigés" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20210506132122141" modified="20230914010443636" title="$:/temp/advancedsearch">
-<pre></pre>
+<div created="20210506132122141" modified="20240820043102213" title="$:/temp/advancedsearch">
+<pre>title</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -9660,7 +9658,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/Heros/OneDrive%20-%20C%C3%A9gep%20Limoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/Heros/OneDrive%20-%20C%C3%A9gep%20Limoilou/A24/420-383-LI%20BD2%20(FDG)/420-383-li/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9680,7 +9678,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/Heros/OneDrive%20-%20C%C3%A9gep%20Limoilou/420-383-LI%20BD2%20A2023%20(FDG)/420-383-li-em/index.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/Heros/OneDrive%20-%20C%C3%A9gep%20Limoilou/A24/420-383-LI%20BD2%20(FDG)/420-383-li/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9692,7 +9690,7 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;2867&quot;
+            &quot;text&quot;: &quot;2134&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
@@ -9819,7 +9817,7 @@ Error message and password prompt
 <div bag="default" created="20200226152541606" modified="20230819153324707" revision="0" tags="[[Table des matières]]" title="00 Documents utiles" type="text/vnd.tiddlywiki">
 <pre>* [[Diagrammes de jointures|https://lecegeplimoilou-my.sharepoint.com/:b:/g/personal/eric_martel_cegeplimoilou_ca/EVWuTHGa5BZBmncW32QTlZoBfMAhB9EbXChBqdnvavU6SQ?e=yu2bIw]]</pre>
 </div>
-<div bag="default" created="20200122025928235" modified="20200129153351238" revision="0" tags="[[Table des matières]]" title="01 Oracle XE" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200122025928235" modified="20240820042537526" revision="0" tags="[[Table des matières]]" title="01 Oracle Database" type="text/vnd.tiddlywiki">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 
 &lt;$macrocall $name=&quot;toc-selective-expandable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;
@@ -9892,7 +9890,7 @@ Error message and password prompt
 
 &lt;/div&gt;</pre>
 </div>
-<div bag="default" created="20200122032725014" list="" modified="20230828185631254" revision="0" tags="[[01 Oracle XE]]" title="1.01 Introduction" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200122032725014" list="" modified="20240820042537526" revision="0" tags="[[01 Oracle Database]]" title="1.01 Introduction" type="text/vnd.tiddlywiki">
 <pre>Oracle XE est la version gratuite du SGDB Oracle. Il offre toutes les fonctionnalités de la version payante, avec seulement quelques limitations dans ses capacités (comme nombre de processeurs, stockage maximal, etc.). Il est idéal pour l'apprentissage ou pour de petits projets.
 
 !! Les concepts de schéma et de BD dans Oracle
@@ -10008,14 +10006,14 @@ Il est possible que le pare-feu Windows ''bloque la première tentative'' de con
 
 </pre>
 </div>
-<div created="20210912205446995" modified="20230819223214721" tags="[[01 Oracle XE]]" title="1.04 Importation de données avec SQL Developer">
+<div created="20210912205446995" list="" modified="20240820042537526" tags="[[01 Oracle Database]]" title="1.04 Importation de données avec SQL Developer">
 <pre>Présentation de [[Oracle SQL Developer | https://www.oracle.com/ca-fr/database/sqldeveloper/technologies/what-is-sql-developer/]]
 
 Un exemple de comment importer des données dans Oracle avec SQL Developer:
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/GcB4_0Iz2Zw?controls=0&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20220823111521592" modified="20220823111626342" tags="[[01 Oracle XE]]" title="1.Exercices">
+<div created="20220823111521592" list="" modified="20240820042537526" tags="[[01 Oracle Database]]" title="1.Exercices">
 <pre>&lt;&lt;enfants&gt;&gt;</pre>
 </div>
 <div bag="default" created="20200212151101505" modified="20221024233715866" revision="0" tags="[[Table des matières]]" title="10 PL/SQL" type="text/vnd.tiddlywiki">
@@ -14145,7 +14143,7 @@ li {
   margin-bottom: 0.5em;
 }</pre>
 </div>
-<div bag="default" created="20200122032725014" draft.of="1.01 Introduction" draft.title="1.01 Introduction" list="" modified="20231003145710814" revision="0" tags="[[01 Oracle XE]]" title="Draft of '1.01 Introduction'" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200122032725014" draft.of="1.01 Introduction" draft.title="1.01 Introduction" list="" modified="20240820042537526" revision="0" tags="[[01 Oracle Database]]" title="Draft of '1.01 Introduction'" type="text/vnd.tiddlywiki">
 <pre>Oracle XE est la version gratuite du SGDB Oracle. Il offre toutes les fonctionnalités de la version payante, avec seulement quelques limitations dans ses capacités (comme nombre de processeurs, stockage maximal, etc.). Il est idéal pour l'apprentissage ou pour de petits projets.
 
 !! Les concepts de schéma et de BD dans Oracle
@@ -14369,280 +14367,11 @@ FROM
    employe;
 ```</pre>
 </div>
-<div created="20231028215845302" draft.of="New Tiddler" draft.title="New Tiddler" modified="20231028215845302" tags="" title="Draft of 'New Tiddler'">
+<div created="20240820042852161" draft.of="New Tiddler 1" draft.title="New Tiddler 1" modified="20240820042852161" tags="" title="Draft of 'New Tiddler 1'">
 <pre></pre>
 </div>
-<div created="20231003140612433" draft.of="TP1" draft.title="TP1" modified="20231023125225140" tags="Corrigés" title="Draft of 'TP1'">
-<pre>```sql
--- Suppression des tables
-DROP TABLE cp_commandes_produits CASCADE CONSTRAINTS;
-DROP TABLE pr_produits CASCADE CONSTRAINTS;
-DROP TABLE co_commandes CASCADE CONSTRAINTS;
-DROP TABLE re_restaurants;
-DROP TABLE cl_clients;
-DROP TABLE li_livreurs;
-
-
---creation tableau restaurants
-CREATE TABLE re_restaurants(
-    re_id  NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY NOT NULL,
-    re_nom VARCHAR2(255) NOT NULL,
-    re_adresse VARCHAR2(255) NOT NULL
-);
-
---creation tableau clients
-CREATE TABLE cl_clients(
-    cl_id  NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
-    cl_prenom VARCHAR2(100),
-    cl_nom VARCHAR2(100),
-    cl_adresse VARCHAR2(100) NOT NULL,
-    cl_telephone VARCHAR2(20) NOT NULL
-);
-
---creation table livreurs
-CREATE TABLE li_livreurs(
-    li_id  NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
-    li_telephone VARCHAR2(20),
-    li_prenom VARCHAR2(100) NOT NULL,
-    li_nom VARCHAR2(100) NOT NULL
-);
-
---creation table commandes
-CREATE TABLE co_commandes(
-    co_id  NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
-    co_numero NUMBER NOT NULL,
-    co_date DATE NOT NULL,
-    co_restaurants_id NUMBER REFERENCES re_restaurants(re_id) NOT NULL ,
-    co_clients_id NUMBER REFERENCES cl_clients(cl_id) NOT NULL,
-    co_livreurs_id NUMBER REFERENCES li_livreurs(li_id) NOT NULL
-);
-
---creation tableau produits
-CREATE TABLE pr_produits(
-    pr_id  NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
-    pr_nom VARCHAR2(50) NOT NULL,
-    pr_prix_vente NUMBER NOT NULL
-);
-
---creation tableau commandes produits
-CREATE TABLE cp_commandes_produits(
-    cp_id  NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
-    cp_quantite NUMBER NOT NULL,
-    cp_commandes_id NUMBER REFERENCES co_commandes(co_id) NOT NULL,
-    cp_produits_id NUMBER REFERENCES pr_produits(pr_id) NOT NULL
-);
-
-
-
---Insertion livreur
-INSERT INTO li_livreurs(li_prenom, li_nom, li_telephone) 
-VALUES('Étienne', 'Larue', '418-097-1286');
-
-INSERT INTO li_livreurs(li_prenom, li_nom, li_telephone) 
-VALUES ('Jean', 'Latour', '418-764-9054');
-
-INSERT INTO li_livreurs(li_prenom, li_nom, li_telephone) 
-VALUES ('Pierre', 'Dufort', '418-043-3325');
-
-INSERT INTO li_livreurs(li_prenom, li_nom, li_telephone) 
-VALUES ('Jeanne', 'Legrand', '418-987-3298');
-
-INSERT INTO li_livreurs(li_prenom, li_nom, li_telephone) 
-VALUES ('Maryse', 'Ouellet', '418-764-0761');
-
-
---Insertion restaurants
-
-INSERT INTO re_restaurants(re_nom, re_adresse) 
-VALUES('Normandin', '1234, boul. Hamel');
-
-INSERT INTO re_restaurants(re_nom, re_adresse) 
-VALUES('Taj mahal', '567, rue du Parc');
-
-INSERT INTO re_restaurants(re_nom, re_adresse)
-VALUES('Sushi Shop','987, av. Rivière');
-
-INSERT INTO re_restaurants(re_nom, re_adresse) 
-VALUES('Normandin', '1277, 3e Avenue');
-
-INSERT INTO re_restaurants(re_nom, re_adresse) 
-VALUES('Le Pub', '5566, rue de la Faune');
-
---Insertion clients
-INSERT INTO cl_clients(cl_adresse, cl_telephone)
-VALUES('556, rue Abécédé', '418 123-4567');
-
-INSERT INTO cl_clients(cl_adresse, cl_telephone) 
-VALUES('557, rue Effgé', '418 123-4568');
-
-INSERT INTO cl_clients(cl_adresse, cl_telephone) 
-VALUES('558, rue Hijika', '418 123-4569');
-
-INSERT INTO cl_clients(cl_adresse, cl_telephone)
-VALUES('559, rue Opécu', '418 123-4561');
-
-INSERT INTO cl_clients(cl_adresse, cl_telephone) 
-VALUES('560, rue Erresté', '418 123-4562');
-
---Insertion commande
-INSERT INTO co_commandes(co_numero, co_date, co_restaurants_id, co_clients_id, co_livreurs_id) 
-VALUES(1301,TO_DATE('2019-12-23 17:13' ,'YYYY-MM-DD HH24:MI'), 
-    (SELECT re_id FROM re_restaurants WHERE re_adresse = '1234, boul. Hamel'),
-    (SELECT cl_id FROM cl_clients WHERE cl_adresse= '556, rue Abécédé'), 
-    (SELECT li_id FROM li_livreurs WHERE li_telephone = '418-097-1286'));
-
-INSERT INTO co_commandes(co_numero, co_date, co_restaurants_id, co_clients_id, co_livreurs_id) 
-VALUES(722,TO_DATE('2019-12-26 17:44' ,'YYYY-MM-DD HH24:MI'),
-    (SELECT re_id FROM re_restaurants WHERE re_adresse = '567, rue du Parc'),
-    (SELECT cl_id FROM cl_clients WHERE cl_adresse= '557, rue Effgé'), 
-    (SELECT li_id FROM li_livreurs WHERE li_telephone = '418-764-9054'));
-
-INSERT INTO co_commandes(co_numero, co_date, co_restaurants_id, co_clients_id, co_livreurs_id) 
-VALUES(1037,TO_DATE('2019-12-27 18:05' ,'YYYY-MM-DD HH24:MI'), 
-    (SELECT re_id FROM re_restaurants WHERE re_adresse = '987, av. Rivière'),
-    (SELECT cl_id FROM cl_clients WHERE  cl_adresse= '558, rue Hijika'), 
-    (SELECT li_id FROM li_livreurs WHERE li_telephone = '418-043-3325'));
-
-INSERT INTO co_commandes(co_numero, co_date, co_restaurants_id, co_clients_id, co_livreurs_id) 
-VALUES(1994,TO_DATE('2019-12-29 16:57' ,'YYYY-MM-DD HH24:MI'),
-    (SELECT re_id FROM re_restaurants WHERE re_adresse = '1277, 3e Avenue'),
-    (SELECT cl_id FROM cl_clients WHERE cl_adresse= '557, rue Effgé'), 
-    (SELECT li_id FROM li_livreurs WHERE li_telephone = '418-987-3298'));
-
-INSERT INTO co_commandes(co_numero, co_date, co_restaurants_id, co_clients_id, co_livreurs_id) 
-VALUES(876,TO_DATE('2020-01-03 17:36' ,'YYYY-MM-DD HH24:MI'),
-    (SELECT re_id FROM re_restaurants WHERE re_adresse = '5566, rue de la Faune'),
-    (SELECT cl_id FROM cl_clients WHERE cl_adresse= '559, rue Opécu'), 
-    (SELECT li_id FROM li_livreurs WHERE li_telephone = '418-764-0761'));
-
-INSERT INTO co_commandes(co_numero, co_date, co_restaurants_id, co_clients_id, co_livreurs_id) 
-VALUES(1098,TO_DATE('2020-01-05 18:26' ,'YYYY-MM-DD HH24:MI'),
-    (SELECT re_id FROM re_restaurants WHERE re_adresse = '987, av. Rivière'),
-    (SELECT cl_id FROM cl_clients WHERE cl_adresse = '560, rue Erresté'), 
-    (SELECT li_id FROM li_livreurs WHERE li_telephone = '418-764-9054'));
- 
-
---Insertion produits
-INSERT INTO pr_produits(pr_nom, pr_prix_vente) 
-VALUES('Spaghetti', 12.00);
-
-INSERT INTO pr_produits(pr_nom, pr_prix_vente) 
-VALUES('Poulet au beurre', 22.99);
-
-INSERT INTO pr_produits(pr_nom, pr_prix_vente) 
-VALUES('Sumomaki', 9.50);
-
-INSERT INTO pr_produits(pr_nom, pr_prix_vente) 
-VALUES('Nigiri', 6.66);
-
-INSERT INTO pr_produits(pr_nom, pr_prix_vente) 
-VALUES('Pain à l''ail', 4.00);
-
-INSERT INTO pr_produits(pr_nom, pr_prix_vente) 
-VALUES('Fish ' || '&amp;' || ' ship', 14.00);
-
-
---Ajout de relations entre produit et commande
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(3, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1301),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Spaghetti'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(1, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =722),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Poulet au beurre'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(1, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1037),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Sumomaki'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(2, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1037),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Nigiri'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(1, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1994),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Spaghetti'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(4, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1994),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Pain à l''ail'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(1, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =876),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Fish ' || '&amp;' || ' ship'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(5, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1098),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Sumomaki'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(5, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1098),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Nigiri'));
-
-
--- Question 3
-INSERT INTO li_livreurs(li_prenom, li_nom, li_telephone) 
-VALUES ('Gabriel', 'Lefranc', '418-765-5567');
-
-INSERT INTO cl_clients(cl_adresse, cl_telephone) 
-VALUES('567, rue des Érables', '418 123-1111');
-
-INSERT INTO co_commandes(co_numero, co_date, co_restaurants_id, co_clients_id, co_livreurs_id) 
-VALUES(1034,TO_DATE('2023-04-05 18:21' ,'YYYY-MM-DD HH24:MI'), 
-    (SELECT re_id FROM re_restaurants WHERE re_adresse = '567, rue du Parc'),
-    (SELECT cl_id FROM cl_clients WHERE cl_adresse= '567, rue des Érables'), 
-    (SELECT li_id FROM li_livreurs WHERE li_telephone = '418-765-5567'));
-
-INSERT INTO pr_produits(pr_nom, pr_prix_vente) VALUES('Hot dog', 2.99);
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(2, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1034),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Hot dog'));
-
-
--- Question 4
-SELECT
-    li_prenom || ' ' || li_nom AS &quot;livreur&quot;,
-    re_nom AS &quot;restaurant&quot;,
-    re_adresse AS &quot;adresse_restaurant&quot;,
-    '#' || co_numero || ', ' || TO_CHAR(co_date, 'YYYY-MM-DD HH24:MI') AS &quot;commande_restaurant&quot;,
-    SUM(cp_quantite * pr_prix_vente) AS &quot;commande_prix_total&quot;,
-    cl_adresse AS &quot;adresse_client&quot;,
-    cl_telephone AS &quot;tel_client&quot;
-FROM co_commandes
-    JOIN li_livreurs ON co_commandes.co_livreurs_id = li_livreurs.li_id 
-    JOIN cl_clients ON co_commandes.co_clients_id = cl_clients.cl_id
-    JOIN re_restaurants ON co_commandes.co_restaurants_id = re_restaurants.re_id
-    JOIN cp_commandes_produits ON co_commandes.co_id = cp_commandes_produits.cp_commandes_id
-    JOIN pr_produits ON cp_commandes_produits.cp_produits_id = pr_produits.pr_id
-GROUP BY 
-    li_prenom || ' ' || li_nom,
-    re_nom ,
-    re_adresse,
-    '#' || co_numero || ', ' || TO_CHAR(co_date, 'YYYY-MM-DD HH24:MI'),
-    cl_adresse,
-    cl_telephone
-ORDER BY &quot;livreur&quot;; 
-
--- Question 5
-SELECT
-    pr_nom AS &quot;Nom de produits&quot;,
-    SUM(cp_quantite) AS &quot;Quantite total&quot;
-FROM pr_produits
-    INNER JOIN cp_commandes_produits ON pr_produits.pr_id = cp_commandes_produits.cp_produits_id
-GROUP BY pr_nom
-ORDER BY &quot;Quantite total&quot; DESC;
-```</pre>
+<div created="20231028215845302" draft.of="New Tiddler" draft.title="New Tiddler" modified="20231028215845302" tags="" title="Draft of 'New Tiddler'">
+<pre></pre>
 </div>
 <div bag="default" revision="0" title="E:\tmp\420-383-li-em\NotesDeCours\tiddlers\$__StoryList-winzen.tid">
 <pre></pre>
@@ -15228,7 +14957,7 @@ ORDER BY
     COUNT(first_name) DESC;
 </pre>
 </div>
-<div created="20231003141456048" modified="20231012191834517" tags="[[Table des matières]]" title="Exercices examen 1">
+<div created="20231003141456048" modified="20240820041913435" title="Exercices examen 1">
 <pre>''1.'' Imaginez que vous travaillez sur une base de données pour une bibliothèque. Vous avez une table de données appelée &quot;livres_empruntes&quot; avec les attributs suivants :
 
 * ISBN 
@@ -15342,23 +15071,23 @@ Les clefs primaires et les clefs uniques sont toutes indexées par nature. Pour 
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20210927003228151" modified="20231114153455963" tags="" title="Semainier">
+<div created="20210927003228151" modified="20240820042435366" tags="" title="Semainier">
 <pre>| Semaine | Sections à étudier | Exercices / Travaux |h
-| 1 | 1.01 | 1.02, 1.03 |
-| 2 | 2, 3 | 3. |
-| 3 | 4 | 4. |
-| 4  | 5, 6 | 5. , 6. et TP 1 |
-| 5  | 7, 1.04 | TP 1, 7.  |
-| 6  | 8 | 8.1 , TP 2 |
+| 1 | 1 | 1 |
+| 2 | 2, 3 | 3 |
+| 3 | 4 | 4 |
+| 4  | 5, 6 | 5., 6 et TP 1 |
+| 5  | 7 |  7  |
+| 6  | 8 | 8 , TP 2 |
 | 7 | pas de nouvelle matière | TP 2 |
-| |Semaine de lecture | Exercices, TP 2 |
+|&gt;|Semaine de lecture|&lt;|
 | 8 | ''Examen  1'' |&lt;|
 | 9  | 10.01 à 10.06 | 10.1 |
 | 10 | 10.07 à 10.09 | 10.2 |
 | 11  | 10.10, 10.11 | 10.3, TP3 |
 | 12 | 11 | TP3, 11 |
 | 13 | 12, 13 | 13.1 à 13.4 |
-| 14 | Pas de nouvelle matière | TP4 |
+| 14 | 14 | TP4 |
 | 15 | ''Examen  2'' |&lt;|</pre>
 </div>
 <div bag="default" caption="Contenu" created="20181113130821883" list-before="$:/core/ui/SideBar/Open" modified="20181113131023314" revision="0" tags="$:/tags/SideBar" title="Table des matières" type="text/vnd.tiddlywiki">
@@ -15367,516 +15096,6 @@ Les clefs primaires et les clefs uniques sont toutes indexées par nature. Pour 
 &lt;&lt;toc-selective-expandable 'Table des matières'&gt;&gt;
 
 &lt;/div&gt;</pre>
-</div>
-<div created="20220913140928879" modified="20230821133048937" tags="[[99 Travaux pratiques]]" title="TP 1">
-<pre>|!À remettre: |&lt;ul&gt;&lt;li&gt;Archive de tous les documents (le cas échéant) produits à remettre par Teams ''et'' présentation à l'enseignant en classe&lt;/li&gt;&lt;li&gt;Remise individuelle&lt;/li&gt;&lt;/ul&gt;|
-|!Date limite de remise (incluant la présentation en classe): |&lt;ul&gt;&lt;li&gt;Sur Omnivox&lt;/li&gt;&lt;/ul&gt;|
-|!Évaluation: |&lt;ul&gt;&lt;li&gt;Ce travail vaut pour 6 % de la session&lt;/li&gt;&lt;li&gt;Évaluation en classe&lt;/li&gt;&lt;li&gt;-10% de pénalité par jour ouvrable de retard, ''incluant pour cause d'indisponibilité de l'enseignant'' (il est de la responsabilité de l'élève de prendre rendez-vous avec l'enseignant en-dehors des heures de cours si présentation en retard; présentations par Teams possibles)&lt;/li&gt;&lt;/ul&gt;|
-
-! Énoncé
-
-Complétez et présentez ''à la satisfaction de l'enseignant'' les exercices suivants:
-
-* 3.1 (10 %)
-* 4.1 (10 %)
-* 5.1 (20 %)
-* 6.1 (20 %)
-* 6.2 (20 %)
-* 6.3 (20 %)</pre>
-</div>
-<div created="20220926152627387" modified="20230821133123816" tags="[[99 Travaux pratiques]]" title="TP 2">
-<pre>|!À remettre: |&lt;ul&gt;&lt;li&gt;Archive de tous les documents (le cas échéant) produits à remettre dans la section Devoirs de Teams&lt;/li&gt;&lt;li&gt;Remise individuelle&lt;/li&gt;&lt;/ul&gt;|
-|!Date limite de remise (incluant la présentation en classe): |&lt;ul&gt;&lt;li&gt;Sur Omnivox&lt;/li&gt;&lt;/ul&gt;|
-|!Évaluation: |&lt;ul&gt;&lt;li&gt;Ce travail vaut pour 8 % de la session&lt;/li&gt;&lt;li&gt;L'évaluation sera faite selon une grille d'évaluation qui sera fournie.&lt;/li&gt;&lt;li&gt;-10% de pénalité par jour ouvrable de retard&lt;/li&gt;&lt;/ul&gt;|
-
-! Énoncé
-
-Complétez les exercices suivants:
-
-* 8.1 (50 %)
-* 8.2 (30 %)
-* 8.3 (20 %)</pre>
-</div>
-<div created="20231003140612433" modified="20231005184955813" tags="Corrigés" title="TP1">
-<pre>```sql
--- Suppression des tables
-DROP TABLE cp_commandes_produits CASCADE CONSTRAINTS;
-DROP TABLE pr_produits CASCADE CONSTRAINTS;
-DROP TABLE co_commandes CASCADE CONSTRAINTS;
-DROP TABLE re_restaurants;
-DROP TABLE cl_clients;
-DROP TABLE li_livreurs;
-
-
---creation tableau restaurants
-CREATE TABLE re_restaurants(
-    re_id  NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY NOT NULL,
-    re_nom VARCHAR2(255) NOT NULL,
-    re_adresse VARCHAR2(255) NOT NULL
-);
-
---creation tableau clients
-CREATE TABLE cl_clients(
-    cl_id  NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
-    cl_prenom VARCHAR2(100),
-    cl_nom VARCHAR2(100),
-    cl_adresse VARCHAR2(100) NOT NULL,
-    cl_telephone VARCHAR2(20) NOT NULL
-);
-
---creation table livreurs
-CREATE TABLE li_livreurs(
-    li_id  NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
-    li_telephone VARCHAR2(20),
-    li_prenom VARCHAR2(100) NOT NULL,
-    li_nom VARCHAR2(100) NOT NULL
-);
-
---creation table commandes
-CREATE TABLE co_commandes(
-    co_id  NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
-    co_numero NUMBER NOT NULL,
-    co_date DATE NOT NULL,
-    co_restaurants_id NUMBER REFERENCES re_restaurants(re_id) NOT NULL ,
-    co_clients_id NUMBER REFERENCES cl_clients(cl_id) NOT NULL,
-    co_livreurs_id NUMBER REFERENCES li_livreurs(li_id) NOT NULL
-);
-
---creation tableau produits
-CREATE TABLE pr_produits(
-    pr_id  NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
-    pr_nom VARCHAR2(50) NOT NULL,
-    pr_prix_vente NUMBER NOT NULL
-);
-
---creation tableau commandes produits
-CREATE TABLE cp_commandes_produits(
-    cp_id  NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
-    cp_quantite NUMBER NOT NULL,
-    cp_commandes_id NUMBER REFERENCES co_commandes(co_id) NOT NULL,
-    cp_produits_id NUMBER REFERENCES pr_produits(pr_id) NOT NULL
-);
-
-
-
---Insertion livreur
-INSERT INTO li_livreurs(li_prenom, li_nom, li_telephone) 
-VALUES('Étienne', 'Larue', '418-097-1286');
-
-INSERT INTO li_livreurs(li_prenom, li_nom, li_telephone) 
-VALUES ('Jean', 'Latour', '418-764-9054');
-
-INSERT INTO li_livreurs(li_prenom, li_nom, li_telephone) 
-VALUES ('Pierre', 'Dufort', '418-043-3325');
-
-INSERT INTO li_livreurs(li_prenom, li_nom, li_telephone) 
-VALUES ('Jeanne', 'Legrand', '418-987-3298');
-
-INSERT INTO li_livreurs(li_prenom, li_nom, li_telephone) 
-VALUES ('Maryse', 'Ouellet', '418-764-0761');
-
-
---Insertion restaurants
-
-INSERT INTO re_restaurants(re_nom, re_adresse) 
-VALUES('Normandin', '1234, boul. Hamel');
-
-INSERT INTO re_restaurants(re_nom, re_adresse) 
-VALUES('Taj mahal', '567, rue du Parc');
-
-INSERT INTO re_restaurants(re_nom, re_adresse)
-VALUES('Sushi Shop','987, av. Rivière');
-
-INSERT INTO re_restaurants(re_nom, re_adresse) 
-VALUES('Normandin', '1277, 3e Avenue');
-
-INSERT INTO re_restaurants(re_nom, re_adresse) 
-VALUES('Le Pub', '5566, rue de la Faune');
-
---Insertion clients
-INSERT INTO cl_clients(cl_adresse, cl_telephone)
-VALUES('556, rue Abécédé', '418 123-4567');
-
-INSERT INTO cl_clients(cl_adresse, cl_telephone) 
-VALUES('557, rue Effgé', '418 123-4568');
-
-INSERT INTO cl_clients(cl_adresse, cl_telephone) 
-VALUES('558, rue Hijika', '418 123-4569');
-
-INSERT INTO cl_clients(cl_adresse, cl_telephone)
-VALUES('559, rue Opécu', '418 123-4561');
-
-INSERT INTO cl_clients(cl_adresse, cl_telephone) 
-VALUES('560, rue Erresté', '418 123-4562');
-
---Insertion commande
-INSERT INTO co_commandes(co_numero, co_date, co_restaurants_id, co_clients_id, co_livreurs_id) 
-VALUES(1301,TO_DATE('2019-12-23 17:13' ,'YYYY-MM-DD HH24:MI'), 
-    (SELECT re_id FROM re_restaurants WHERE re_adresse = '1234, boul. Hamel'),
-    (SELECT cl_id FROM cl_clients WHERE cl_adresse= '556, rue Abécédé'), 
-    (SELECT li_id FROM li_livreurs WHERE li_telephone = '418-097-1286'));
-
-INSERT INTO co_commandes(co_numero, co_date, co_restaurants_id, co_clients_id, co_livreurs_id) 
-VALUES(722,TO_DATE('2019-12-26 17:44' ,'YYYY-MM-DD HH24:MI'),
-    (SELECT re_id FROM re_restaurants WHERE re_adresse = '567, rue du Parc'),
-    (SELECT cl_id FROM cl_clients WHERE cl_adresse= '557, rue Effgé'), 
-    (SELECT li_id FROM li_livreurs WHERE li_telephone = '418-764-9054'));
-
-INSERT INTO co_commandes(co_numero, co_date, co_restaurants_id, co_clients_id, co_livreurs_id) 
-VALUES(1037,TO_DATE('2019-12-27 18:05' ,'YYYY-MM-DD HH24:MI'), 
-    (SELECT re_id FROM re_restaurants WHERE re_adresse = '987, av. Rivière'),
-    (SELECT cl_id FROM cl_clients WHERE  cl_adresse= '558, rue Hijika'), 
-    (SELECT li_id FROM li_livreurs WHERE li_telephone = '418-043-3325'));
-
-INSERT INTO co_commandes(co_numero, co_date, co_restaurants_id, co_clients_id, co_livreurs_id) 
-VALUES(1994,TO_DATE('2019-12-29 16:57' ,'YYYY-MM-DD HH24:MI'),
-    (SELECT re_id FROM re_restaurants WHERE re_adresse = '1277, 3e Avenue'),
-    (SELECT cl_id FROM cl_clients WHERE cl_adresse= '557, rue Effgé'), 
-    (SELECT li_id FROM li_livreurs WHERE li_telephone = '418-987-3298'));
-
-INSERT INTO co_commandes(co_numero, co_date, co_restaurants_id, co_clients_id, co_livreurs_id) 
-VALUES(876,TO_DATE('2020-01-03 17:36' ,'YYYY-MM-DD HH24:MI'),
-    (SELECT re_id FROM re_restaurants WHERE re_adresse = '5566, rue de la Faune'),
-    (SELECT cl_id FROM cl_clients WHERE cl_adresse= '559, rue Opécu'), 
-    (SELECT li_id FROM li_livreurs WHERE li_telephone = '418-764-0761'));
-
-INSERT INTO co_commandes(co_numero, co_date, co_restaurants_id, co_clients_id, co_livreurs_id) 
-VALUES(1098,TO_DATE('2020-01-05 18:26' ,'YYYY-MM-DD HH24:MI'),
-    (SELECT re_id FROM re_restaurants WHERE re_adresse = '987, av. Rivière'),
-    (SELECT cl_id FROM cl_clients WHERE cl_adresse = '560, rue Erresté'), 
-    (SELECT li_id FROM li_livreurs WHERE li_telephone = '418-764-9054'));
- 
-
---Insertion produits
-INSERT INTO pr_produits(pr_nom, pr_prix_vente) 
-VALUES('Spaghetti', 12.00);
-
-INSERT INTO pr_produits(pr_nom, pr_prix_vente) 
-VALUES('Poulet au beurre', 22.99);
-
-INSERT INTO pr_produits(pr_nom, pr_prix_vente) 
-VALUES('Sumomaki', 9.50);
-
-INSERT INTO pr_produits(pr_nom, pr_prix_vente) 
-VALUES('Nigiri', 6.66);
-
-INSERT INTO pr_produits(pr_nom, pr_prix_vente) 
-VALUES('Pain à l''ail', 4.00);
-
-INSERT INTO pr_produits(pr_nom, pr_prix_vente) 
-VALUES('Fish ' || '&amp;' || ' ship', 14.00);
-
-
---Ajout de relations entre produit et commande
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(3, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1301),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Spaghetti'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(1, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =722),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Poulet au beurre'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(1, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1037),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Sumomaki'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(2, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1037),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Nigiri'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(1, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1994),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Spaghetti'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(4, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1994),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Pain à l''ail'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(1, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =876),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Fish ' || '&amp;' || ' ship'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(5, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1098),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Sumomaki'));
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(5, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1098),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Nigiri'));
-
-
--- Question 3
-INSERT INTO li_livreurs(li_prenom, li_nom, li_telephone) 
-VALUES ('Gabriel', 'Lefranc', '418-765-5567');
-
-INSERT INTO cl_clients(cl_adresse, cl_telephone) 
-VALUES('567, rue des Érables', '418 123-1111');
-
-INSERT INTO co_commandes(co_numero, co_date, co_restaurants_id, co_clients_id, co_livreurs_id) 
-VALUES(1034,TO_DATE('2023-04-05 18:21' ,'YYYY-MM-DD HH24:MI'), 
-    (SELECT re_id FROM re_restaurants WHERE re_adresse = '567, rue du Parc'),
-    (SELECT cl_id FROM cl_clients WHERE cl_adresse= '567, rue des Érables'), 
-    (SELECT li_id FROM li_livreurs WHERE li_telephone = '418-765-5567'));
-
-INSERT INTO pr_produits(pr_nom, pr_prix_vente) VALUES('Hot dog', 2.99);
-
-INSERT INTO cp_commandes_produits(cp_quantite, cp_commandes_id, cp_produits_id) 
-VALUES(2, 
-    (SELECT co_id FROM co_commandes WHERE co_numero =1034),
-    (SELECT pr_id FROM pr_produits WHERE pr_nom = 'Hot dog'));
-
-
--- Question 4
-SELECT
-    li_prenom || ' ' || li_nom AS &quot;livreur&quot;,
-    re_nom AS &quot;restaurant&quot;,
-    re_adresse AS &quot;adresse_restaurant&quot;,
-    '#' || co_numero || ', ' || TO_CHAR(co_date, 'YYYY-MM-DD HH24:MI') AS &quot;commande_restaurant&quot;,
-    SUM(cp_quantite * pr_prix_vente) AS &quot;commande_prix_total&quot;,
-    cl_adresse AS &quot;adresse_client&quot;,
-    cl_telephone AS &quot;tel_client&quot;
-FROM co_commandes
-    JOIN li_livreurs ON co_commandes.co_livreurs_id = li_livreurs.li_id 
-    JOIN cl_clients ON co_commandes.co_clients_id = cl_clients.cl_id
-    JOIN re_restaurants ON co_commandes.co_restaurants_id = re_restaurants.re_id
-    JOIN cp_commandes_produits ON co_commandes.co_id = cp_commandes_produits.cp_commandes_id
-    JOIN pr_produits ON cp_commandes_produits.cp_produits_id = pr_produits.pr_id
-GROUP BY 
-    li_prenom || ' ' || li_nom,
-    re_nom ,
-    re_adresse,
-    '#' || co_numero || ', ' || TO_CHAR(co_date, 'YYYY-MM-DD HH24:MI'),
-    cl_adresse,
-    cl_telephone
-ORDER BY &quot;livreur&quot;; 
-
--- Question 5
-SELECT
-    pr_nom AS &quot;Nom de produits&quot;,
-    SUM(cp_quantite) AS &quot;Quantite total&quot;
-FROM pr_produits
-    INNER JOIN cp_commandes_produits ON pr_produits.pr_id = cp_commandes_produits.cp_produits_id
-GROUP BY pr_nom
-ORDER BY &quot;Quantite total&quot; DESC;
-```</pre>
-</div>
-<div created="20231023125150698" modified="20231203205747296" tags="Corrigés" title="TP2">
-<pre>```sql
-/* Exemple de solution TP2
- *********************************************************************/
-
-
-/* Question 1
- ********************************************************************/
-ALTER TABLE ORDERS DROP CONSTRAINT FK_ORDERS_CUSTOMERS;
-ALTER TABLE CONTACTS DROP CONSTRAINT FK_CONTACTS_CUSTOMERS;
-DROP TABLE CONTACTS;
-DROP TABLE CUSTOMERS;
-
-ALTER TABLE ORDER_ITEMS DROP CONSTRAINT FK_ORDER_ITEMS_PRODUCTS;
-ALTER TABLE INVENTORIES DROP CONSTRAINT FK_INVENTORIES_PRODUCTS;
-DROP TABLE PRODUCTS;
-
-DROP TABLE PRODUCT_CATEGORIES;
-/*
-Q1 : On ne peut pas supprimer une table dont une colonne est référencée 
-dans une autre table (clé étrangère). Il faut supprimer la ou les clés étrangères 
-avant de pouvoir supprimer la table.
-*/
-
-/* Question 2
- ********************************************************************/
- 
-CREATE OR REPLACE VIEW vw_inventaire_pays AS 
-SELECT
-    SUM(inventories.quantity) &quot;Quantité totale de produits en inventaire&quot;,
-    countries.country_name &quot;Pays&quot;,
-    regions.region_name &quot;Région&quot;
-FROM
-    inventories
-    INNER JOIN warehouses ON warehouses.warehouse_id = inventories.warehouse_id
-    INNER JOIN locations ON locations.location_id = warehouses.location_id
-    INNER JOIN countries ON countries.country_id = locations.country_id
-    INNER JOIN regions ON regions.region_id = countries.region_id
-GROUP BY
-    countries.country_name,
-    regions.region_name
-ORDER BY
-    SUM(inventories.quantity) DESC;
-     
-SELECT * FROM vw_inventaire_pays;
-
-/* Q2 : Les vues internes font partie d'une requête, elles peuvent seulement être utilisées à l'intérieur de la requête.
- Si nous voulons une requête réutilisable, nous devons utiliser une requête stockée.*/
-
-/* Question 3
- *********************************************************************/
-
--- Ajoute la colonne birth_date avec date système comme date par défaut
-ALTER TABLE employees
-    ADD birth_date DATE DEFAULT SYSDATE NOT NULL;
-
-
-/* Q3 : En séparant une date en plusieurs colonnes on perd la signification de l'information, 
-Oracle a un type dédié pour les dates qui facilite leur gestion (addition, soustraction,..).*/
-
-/* Question 4
- *********************************************************************/              
-MERGE INTO
-    employees emp
-USING (
-    SELECT
-        DATE '1955-01-01' + DBMS_RANDOM.VALUE(0, (DATE '2002-12-31' - DATE '1955-01-01' + 1)) date_alea
-    FROM
-        dual
-) src
-ON (
-    1 = 1
-)
-WHEN MATCHED THEN UPDATE SET
-    emp.birth_date = src.date_alea
-;
-   
-COMMIT;
-
-/* Question 5
- *********************************************************************/
-
-/* Stratégie A: on utilise des UNION (ALL); solution simple et efficace, mais qui implique beaucoup de répétition de code */
-WITH
-   ivw_ages AS (
-        SELECT
-            FLOOR(MONTHS_BETWEEN(SYSDATE, employees.birth_date)/12) AS age
-        FROM
-            employees
-            JOIN orders ON employees.employee_id = orders.salesman_id
-        WHERE
-            orders.status IN ('Shipped', 'Pending')
-    )
-    SELECT 
-        '18-24 ans' AS classe, 
-        COUNT(*) AS commandes 
-    FROM 
-        ivw_ages
-    WHERE
-        age BETWEEN 18 AND 24
-UNION ALL
-    SELECT 
-        '25-34 ans' AS classe,
-        COUNT(*) AS commandes
-    FROM
-        ivw_ages
-    WHERE
-        age BETWEEN 25 AND 34
-UNION ALL
-    SELECT 
-        '35-44 ans' AS classe, 
-        COUNT(*) AS commandes 
-    FROM 
-        ivw_ages
-    WHERE
-        age BETWEEN 35 AND 44
-UNION ALL
-    SELECT 
-        '45-59 ans' AS classe, 
-        COUNT(*) AS commandes
-    FROM
-        ivw_ages
-    WHERE
-        age BETWEEN 45 AND 59
-UNION ALL
-    SELECT  
-        '60 ans et plus' AS classe, 
-        COUNT(*) AS commandes 
-    FROM 
-        ivw_ages
-    WHERE
-        age &gt;= 60
-;
-
-/*  Stratégie B: probablement la plus concise, avec CASE et statut de commande filtré
-    dans la jointure plutôt que dans un WHERE, ce qui permet d'inclure toutes les commandes
-    dans la jointure et d'obtenir des décomptes de 0 commande */
-WITH
-    donnees AS (
-        SELECT 
-            CASE 
-                WHEN (FLOOR(MONTHS_BETWEEN(SYSDATE, employees.birth_date)/12)) BETWEEN 18 AND 24 THEN '18-24 ans' 
-                WHEN (FLOOR(MONTHS_BETWEEN(SYSDATE, employees.birth_date)/12)) BETWEEN 25 AND 34 THEN '25-34 ans' 
-                WHEN (FLOOR(MONTHS_BETWEEN(SYSDATE, employees.birth_date)/12)) BETWEEN 35 AND 44 THEN '35-44 ans' 
-                WHEN (FLOOR(MONTHS_BETWEEN(SYSDATE, employees.birth_date)/12)) BETWEEN 45 AND 59 THEN '45-59 ans' 
-                ELSE '60 ans et plus'
-            END classe,
-            COUNT (orders.order_id) AS commandes
-        FROM
-            orders 
-            RIGHT JOIN employees ON employees.employee_id = orders.salesman_id AND orders.status IN ('Pending', 'Shipped')
-        GROUP BY 
-            CASE 
-                WHEN (FLOOR(MONTHS_BETWEEN(SYSDATE,employees.birth_date)/12)) BETWEEN 18 AND 24 THEN '18-24 ans' 
-                WHEN (FLOOR(MONTHS_BETWEEN(SYSDATE,employees.birth_date)/12)) BETWEEN 25 AND 34 THEN '25-34 ans' 
-                WHEN (FLOOR(MONTHS_BETWEEN(SYSDATE,employees.birth_date)/12)) BETWEEN 35 AND 44 THEN '35-44 ans' 
-                WHEN (FLOOR(MONTHS_BETWEEN(SYSDATE,employees.birth_date)/12)) BETWEEN 45 AND 59 THEN '45-59 ans' 
-                ELSE '60 ans et plus'
-            END
-    )
-SELECT
-    *
-FROM
-    donnees
-ORDER BY
-    classe ASC
-;
-
-
-```</pre>
-</div>
-<div created="20231203205019402" modified="20231203205838674" tags="Corrigés" title="TP4">
-<pre>Corrigé de la question 5
-
-```sql
--- Q5 :Créez tous les index nécessaire pour accélérer les requêtes suivantes:
-CONNECT sample_oracle_database/abc123@192.168.56.101/xepdb1;
-/* R1
-SELECT email
-FROM contacts
-WHERE first_name = 'John' AND last_name = 'Smith';
-*/
--- INDEX R1 -- 
--- Index composé de deux colones puisque la clause WHERE utilise les deux. 
-CREATE INDEX idx_con_first_name ON contacts(first_name, last_name);
---------------
-/* R2
-SELECT creadit_limit, salesman_id, order_date
-FROM customers cu
-JOIN orders od ON cu.customer_id = od.customer_id
-WHERE website = 'newegg';
-*/
--- INDEX R2 -- 
---Indexation de la clé étrangère dans orders
-CREATE INDEX idx_ord_website ON orders(customer_id);
---Index simple de la colone website puisque la clause WHERE l'utilise
-CREATE INDEX idx_cus_website ON customers(website);
---------------
-/*Attention: Il y a seulement 13 job_titles et plusieurs milliers d'employés
-SELECT * 
-FROM employees
-WHERE job_title = 2;
-*/
--- INDEX R3 -- 
--- Index de type BITMAP puisque la colone job_title contient peu de valeurs différentes &lt;100
-CREATE BITMAP INDEX idx_emp_job_title ON employees(job_title);
---------------
-```</pre>
 </div>
 
 </div>
